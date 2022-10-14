@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dms.guyiyao.mapper.TsUserMapper">
+<select id="containEmail" resultType="Integer">
+    SELECT COUNT(*) FROM ts_user WHERE email=#{email} and status='0'
+</select>
+    <select id="containUser" resultType="Integer">
+        SELECT COUNT(*) FROM ts_user WHERE username=#{username} and status='0'
+</select>
+    <select id="getUserInfo" resultType="com.dms.guyiyao.pojo.UserInfo">
+        select  username,nickname,icon,email,usertype from ts_user where  username=#{username}
+    </select>
+    <update id="updateNickName">
+        update ts_user set nickname=#{nickname} where username=#{username}
+    </update>
+    <update id="updateIcon">
+        update ts_user set icon=#{url} where username=#{username}
+    </update>
+    <update id="updatePass">
+        update  ts_user set password=#{password} where username=#{username}
+    </update>
+    <select id="getUserInfoByEmail" resultType="com.dms.guyiyao.pojo.UserInfo">
+        select  username,nickname,icon,email,usertype from ts_user where  email=#{username}
+    </select>
+    <select id="getUser" resultType="com.dms.guyiyao.pojo.entity.User">
+        select   id,username as  userName,password from ts_user where  username=#{username} or email=#{username}
+    </select>
+</mapper>

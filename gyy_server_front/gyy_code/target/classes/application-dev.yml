@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    username: root
+    password: Admin8090!
+    url: jdbc:mysql://106.14.36.75:3306/bzyreader
+    driver-class-name: com.mysql.jdbc.Driver

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dms.guyiyao.mapper.TsBookChapterMapper">
+
+ <select id="getChildFromDB" resultType="com.dms.guyiyao.pojo.CataLog">
+     SELECT id,grade,chapter_name as val FROM ts_book_chapter
+     WHERE parentid=#{id}
+     ORDER BY sequence
+ </select>
+    <select id="getRootList" resultType="com.dms.guyiyao.pojo.CataLog">
+        SELECT id,grade,chapter_name as val
+        from ts_book_chapter
+        where ts_book_id=(SELECT id from ts_book WHERE bookname=#{bookName})
+          and grade =#{grade}
+    </select>
+    <select id="getChapter" resultType="com.dms.guyiyao.pojo.CataLog">
+        SELECT id,parentid,grade,chapter_name as chapter FROM ts_book_chapter
+        WHERE
+            parentid=#{id} and status=0 order by sequence
+    </select>
+    <select id="getChapter_grade_1" resultType="com.dms.guyiyao.pojo.CataLog">
+        SELECT id,parentid,grade,chapter_name as chapter FROM ts_book_chapter
+        WHERE
+            grade=1  and ts_book_id=(SELECT id FROM ts_book WHERE bookname=#{bookName}) and status=0 order by sequence
+    </select>
+    <select id="getChapterNode" resultType="com.dms.guyiyao.pojo.TreeNode">
+        SELECT a.id,a.parentid,a.chapter_name as chapter,a.Id,a.sequence,a.grade FROM ts_book_chapter as a,ts_book as b WHERE a.ts_book_id=b.id and b.bookname=#{bookName}  and a.status=0 and b.status=0 ORDER BY a.grade,a.sequence
+    </select>
+    <select id="getBookAndChapter" resultType="com.dms.guyiyao.pojo.word.Book_Chapter">
+select  bookname,chapter_name as chaptername from  ts_book as a,ts_book_chapter as b where  a.id=b.ts_book_id and b.id=#{chapterid} and a.status=0 and b.status=0
+    </select>
+</mapper>

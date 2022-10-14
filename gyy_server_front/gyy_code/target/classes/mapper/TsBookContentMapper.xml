@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dms.guyiyao.mapper.TsBookContentMapper">
+<select id="getContent" resultType="String">
+    SELECT content from ts_book_content WHERE ts_book_chapter_id=#{chapterId} and status = 0
+</select>
+    <select id="getContent_chapter" resultType="String">
+/*
+		DELIMITER //
+create procedure getContent_chapter(in book varchar(255),in chap varchar(255),in dir int)
+begin
+ if  dir=-1 then
+	SELECT chapter_name FROM ts_book_chapter WHERE sequence=(select sequence
+    from ts_book_chapter
+    WHERE ts_book_id=(SELECT id FROM ts_book WHERE bookname=book) and chapter_name=chap
+    order by grade,sequence ASC)-1;
+	elseif dir=1 then
+SELECT chapter_name FROM ts_book_chapter WHERE sequence=(select sequence
+    from ts_book_chapter
+    WHERE ts_book_id=(SELECT id FROM ts_book WHERE bookname=book) and chapter_name=chap
+    order by grade,sequence ASC)+1;
+		end if;
+end ;
+//
+DELIMITER ;
+*/
+CALL getContent_chapter(#{bookName},#{chapter},#{dir})
+    </select>
+
+</mapper>

@@ -1,0 +1,80 @@
+package com.dms.guyiyao.security.filter;
+
+import com.alibaba.fastjson.JSON;
+import com.dms.guyiyao.pojo.resp.ResponseResult;
+import com.dms.guyiyao.security.userdetail.UserdetailImpl;
+import com.dms.guyiyao.utils.JwtUtil;
+import com.dms.guyiyao.utils.Loggers;
+import com.dms.guyiyao.utils.RedisCache;
+import com.dms.guyiyao.utils.WebUtils;
+import io.jsonwebtoken.Claims;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
+import org.springframework.web.filter.OncePerRequestFilter;
+
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.Objects;
+
+@Component
+public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
+
+    @Autowired
+    private RedisCache redisCache;
+
+    @Override
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+        //获取token
+        String token = request.getHeader("token");
+        if (!StringUtils.hasText(token)) {
+            //放行
+            filterChain.doFilter(request, response);
+            return;
+        }
+        //解析token
+        String userid="";
+        try {
+            Claims claims = JwtUtil.parseJWT(token);
+            userid = claims.getSubject();
+        } catch (Exception e) {
+            Loggers.error("token:【"+token+"】非法");
+            ResponseResult result = new ResponseResult(HttpStatus.UNAUTHORIZED.value(),"用户认证失败请查询登录");
+            String json = JSON.toJSONString(result);
+            WebUtils.renderString(response,json);
+            return;
+        }
+        //Token合法进一步验证
+        Loggers.info("token格式合法开始获取redis中的用户信息");
+        String redisKey = "login_front:" + userid;
+        UserdetailImpl loginUser = JSON.toJavaObject(redisCache.getCacheObject(redisKey),UserdetailImpl.class);
+        if(Objects.isNull(loginUser)){
+            Loggers.error("用户处于未登录状态或token对应账户不存在");
+            ResponseResult result = new ResponseResult(HttpStatus.UNAUTHORIZED.value(),"用户认证失败请查询登录");
+            String json = JSON.toJSONString(result);
+            WebUtils.renderString(response,json);
+            return;
+        }else{
+            Loggers.info("Redis中命中到对应用户");
+//        存入SecurityContextHolder
+//        TODO 获取权限信息封装到Authentication中
+        UsernamePasswordAuthenticationToken authenticationToken =
+                new UsernamePasswordAuthenticationToken(loginUser,null,loginUser.getAuthorities());
+        SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+        Loggers.info("放行信息放入过滤链成功");
+//        放行
+        filterChain.doFilter(request, response);
+        }
+    }
+}

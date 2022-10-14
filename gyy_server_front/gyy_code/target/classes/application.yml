@@ -1,0 +1,59 @@
+spring:
+  redis:
+    host: 114.55.85.25
+    port: 60000
+    password: kjddu342u23hz!!o..
+    connect-timeout: 60s
+    lettuce:
+      cluster:
+        refresh:
+          period: 60s
+          adaptive: true
+    timeout: 30s
+  #    lettuce:
+#      pool:
+#        max-active: 50
+#        max-idle: 10
+#        min-idle: 2
+#        max-wait: -1ms
+#    client-type: lettuce
+  profiles:
+    active: dev
+  mail:
+    default-encoding: utf-8
+    host: smtp.qq.com
+    username: 1164175212@qq.com
+    password: qqxgavkugxiyhhde
+    properties:
+      mail:
+        smtp:
+          auth: true
+        starttls:
+          enable: true
+          required: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 1000MB
+server:
+  tomcat:
+    max-http-form-post-size: -1
+  port: 8099
+FTP:
+  ADDRESS: 114.55.85.25
+  PORT: 21
+  USERNAME: ftpuser
+  PASSWORD: mima12345
+  BASEPATH: /home/ftpuser/img
+IMAGE:
+  BASE:
+    URL: http://114.55.85.25/img
+swagger:
+  enable: true
+security:
+  disable: true
+logging:
+  config: classpath:log4j2.yml

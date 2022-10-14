@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dms.guyiyao.mapper.TsBookContentMapper">
+    <select id="getContent" resultType="com.dms.guyiyao.pojo.book.TsBookContent">
+        SELECT id,sequence,content,ts_book_chapter_id from ts_book_content WHERE ts_book_chapter_id=#{chapterId}
+                                                       and status=0
+    </select>
+
+    <update id="deleteContent">
+        update ts_book_content as a
+            left join ts_book_content_type as b on a.ts_book_chapter_id=b.chapter_id set a.status=1,b.status=1,a.lastupdatetime=#{opTime},b.lastupdatetime=#{opTime},a.lastupdate_by_id=#{opUser},b.lastupdate_by_id=#{opUser} WHERE a.id=#{contentId}
+    </update>
+
+    <insert id="addContent">
+        INSERT into ts_book_content (id,content,sequence,ts_book_chapter_id,createtime,create_by_id)VALUES(REPLACE(UUID()
+                                                                    ,'-',''),#{content},#{sequence},#{chapterId},#{opTime},#{opUser})
+    </insert>
+    <update id="updateContent">
+        update ts_book_content
+        set sequence =#{sequence},content=#{content},create_by_id=#{opUser},lastupdatetime=#{opTime}
+        WHERE id=#{contentId}
+    </update>
+    <insert id="addContentType" >
+        insert into ts_book_content_type(id,chapter_id,sequence,label,content,createtime,create_by_id)
+        values (REPLACE(UUID(),'-',''),#{chapter_id},#{sequence},#{labels},#{content},#{createTime},#{opUser})
+    </insert>
+    <update id="updateContentType" >
+        update ts_book_content_type set label=#{labels},lastupdatetime=#{time},lastupdate_by_id=#{opUser} where  chapter_id=#{chapter_id} and sequence=#{sequence}
+    </update>
+    <select id="getContentType" resultType="com.dms.guyiyao.pojo.ContentType">
+       select  sequence,label from ts_book_content_type where chapter_id=#{chapterId} and status=0
+    </select>
+    <update id="deleteContentType">
+        update ts_book_content_type set status=1,lastupdate_by_id=#{opUser},lastupdatetime=#{opTime}  where  chapter_id=#{chapterId} and `sequence`=#{sequence}
+    </update>
+    <select id="containContent" resultType="int">
+select  count(*) from ts_book_content where ts_book_chapter_id=#{chapterId} and status=0
+    </select>
+    <select id="getContentDb" resultType="com.dms.guyiyao.pojo.book.TsBookContentDb">
+        SELECT  a.bookname,b.id AS chapterid,b.chapter_name AS chaptername,c.content
+        FROM ts_book AS a
+                 INNER JOIN ts_book_chapter AS b ON a.id=#{bookid} AND a.id=b.ts_book_id and a.status=0 and b.status=0
+                 LEFT JOIN `ts_book_content`AS c ON b.id=c.ts_book_chapter_id and c.status=0
+    </select>
+    <update id="updateContentByChapterId">
+        UPDATE `ts_book_content` SET content=#{content},type=#{type},lastupdatetime=#{opTime},lastupdate_by_id=#{opUser} where
+            ts_book_chapter_id=#{chapterid} and  status=0
+    </update>
+</mapper>

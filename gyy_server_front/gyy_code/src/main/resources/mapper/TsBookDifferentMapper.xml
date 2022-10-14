@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dms.guyiyao.mapper.TsBookDifferentMapper">
+<select id="getDiffContent_fromAndId" resultType="com.dms.guyiyao.pojo.ContentDiff">
+    SELECT t1.id as contentIdFrom,content as contentFrom
+    FROM ts_book_content_diff as t1,ts_book_different as t2
+    WHERE t1.id=t2.ts_book_content_id_from
+      and ts_book_chapter_id=#{chapterId} and t2.status=0
+</select>
+    <select id="getBookNameAndChapterName" resultType="com.dms.guyiyao.pojo.ContentDiff">
+        SELECT bookname as bookName,tchapter.id as chapterId, chapter_name as chapterName
+        FROM
+            ts_book as tbook,ts_book_chapter as tchapter,ts_book_content_diff as tcontent
+        WHERE
+            tbook.id=tchapter.ts_book_id and tchapter.id=tcontent.ts_book_chapter_id and tcontent.id=#{contentId}
+    </select>
+    <select id="getDiffContentToAndId" resultType="com.dms.guyiyao.pojo.ContentDiff">
+        SELECT b.id as diffId,b.jsonFrom,b.jsonTo,a.id as contentIdTo,	content as contentTo	FROM ts_book_content_diff as a,ts_book_different as b
+        WHERE a.id=b.ts_book_content_id_to
+          and b.ts_book_content_id_from=#{contentId}
+    </select>
+
+    <select id="getAllDiffInfo" resultType="com.dms.guyiyao.pojo.ContentDiff">
+        SELECT t1.id as contentIdFrom,t1.content as contentFrom,t2.id as diffId,t2.jsonFrom,t2.jsonTo,t11.content as contentTo,t11.id as contentIdTo,a.bookname as bookName,b.id as chapterId, b.chapter_name as chapterName
+        FROM ts_book_content_diff as t1,ts_book_different as t2 ,ts_book_content_diff as t11, ts_book as a,ts_book_chapter as b
+        WHERE t1.id=t2.ts_book_content_id_from
+          and t1.ts_book_chapter_id=#{chapterId} and t1.id=t2.ts_book_content_id_from and t11.id=t2.ts_book_content_id_to and a.id=b.ts_book_id AND b.id=t11.ts_book_chapter_id and a.bookName=#{tarBook}
+        and t1.status=0 and t2.status=0 and t11.status=0 and a.status=0 and b.status=0
+    </select>
+</mapper>

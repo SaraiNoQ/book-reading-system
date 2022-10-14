@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dms.guyiyao.mapper.TsBookDifferentMapper">
+<insert id="addDiffContent">
+    insert into ts_book_content_diff(id,ts_book_chapter_id,content,createtime,create_by_id)VALUE(#{contentUuid},#{chapterId},#{content},#{createtime},#{opUser})
+</insert>
+    <insert id="addConnection">
+        insert into ts_book_different(id,ts_book_content_id_from,ts_book_content_id_to,createtime,create_by_id)VALUE(REPLACE(UUID(),'-',''),#{contentFrom_uuid},#{contentTo_uuid},#{createtime},#{opUser})
+    </insert>
+
+    <select id="diffItem" resultType="String">
+        SELECT id FROM ts_book_different WHERE ts_book_content_id_from=#{contentId} and status=0
+
+    </select>
+    <select id="getId" resultType="String">
+        SELECT id
+        FROM ts_book_content_diff WHERE ts_book_chapter_id=#{chapterId} and status=0 order by createtime desc
+    </select>
+
+    <select id="getDiffFrom" resultType="String">
+        SELECT content FROM ts_book_content_diff
+        WHERE id=(SELECT ts_book_content_id_from
+                  FROM ts_book_different WHERE id=#{diffId})
+    </select>
+    <select id="getDiffTo" resultType="String">
+        SELECT content FROM ts_book_content_diff
+        WHERE id=(SELECT ts_book_content_id_to
+                  FROM ts_book_different WHERE id=#{diffId})
+    </select>
+    <select id="getBookFrom" resultType="String">
+        SELECT bookname FROM ts_book as a,ts_book_chapter as b,ts_book_content_diff as c,ts_book_different as d WHERE a.id=b.ts_book_id
+                                                                                                             and b.id=c.ts_book_chapter_id
+                                                                                                             and c.id=d.ts_book_content_id_from and d.ts_book_content_id_from=(SELECT ts_book_content_id_from FROM ts_book_different WHERE id=#{diffId})
+    </select>
+
+    <select id="getChapterTo" resultType="String">
+        SELECT chapter_name FROM ts_book_chapter as b,ts_book_content_diff as c,ts_book_different as d WHERE
+            b.id=c.ts_book_chapter_id
+       and c.id=d.ts_book_content_id_to and d.ts_book_content_id_to=(SELECT ts_book_content_id_to FROM ts_book_different WHERE id=#{diffId})
+    </select>
+
+    <select id="getBookTo" resultType="String">
+        SELECT bookname FROM ts_book as a,ts_book_chapter as b,ts_book_content_diff as c,ts_book_different as d WHERE a.id=b.ts_book_id
+                                                                                                             and b.id=c.ts_book_chapter_id
+                                                                                                             and c.id=d.ts_book_content_id_to and d.ts_book_content_id_to=(SELECT ts_book_content_id_to FROM ts_book_different WHERE id=#{diffId})
+    </select>
+    <select id="getChapterFrom" resultType="String">
+        SELECT chapter_name FROM ts_book_chapter as b,ts_book_content_diff as c,ts_book_different as d WHERE
+            b.id=c.ts_book_chapter_id
+           and c.id=d.ts_book_content_id_from and d.ts_book_content_id_from=(SELECT ts_book_content_id_from FROM ts_book_different WHERE id=#{diffId})
+    </select>
+
+<!--按道理来说还需要删除异文content表，暂时可以不用删-->
+    <update id="deleteDiff">
+        UPDATE ts_book_different set status=1,lastupdate_by_id=#{opUser},lastupdatetime=#{opTime} WHERE id=#{diffId}
+    </update>
+    <update id="updateDiff">
+        call updateDiff(#{diffId},#{contentFrom},#{contentTo})
+    </update>
+
+    <update id="updateHighLight">
+        update ts_book_different set jsonFrom=#{jsonFrom},jsonTo=#{jsonTo} WHERE id=#{diffId}
+    </update>
+    <select id="getDiffJson" resultType="com.dms.guyiyao.pojo.diff.DiffJson">
+        select id,jsonFrom,jsonTo from ts_book_different where id=#{diffId}
+    </select>
+</mapper>

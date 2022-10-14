@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align="center">后台首页</h1>
+<a href="http://localhost:8888/user/getUser/1/1">获取数据库中的用户信息(每页一条，显示第一条)</a><br>
+<a href="http://localhost:8888/book/1/1">获取图书基本信息(每页一条，显示第一条)</a>
+<form method="post" action="http://localhost:8888/login">
+    登录</br>
+    <input type="text" name="username"/><br/>
+    <input type="text" name="password"/><br/>
+    <input type="submit" value="登录">
+
+</form><br/>
+<a href="http://localhost:8888/logout">注销</a>
+<h2 align="center">用户管理模块</h2>
+<form method="post" action="http://localhost:8888/user/searchForUsers/1/2">
+   用户查询(暂时支持三个消息or查询，可以输入三个内容的任一字段，匹配一个字段就返回)</br>
+    账号: <input type="text" name="username"></br>
+   别名: <input type="text" name="nickname"></br>
+   邮箱: <input type="text"name="email"></br>
+    <input type="submit" value="查询">
+</form>
+<form method="post" action="http://localhost:8888/user/deleteUser">
+    用户删除(输入用户名的用户名后将status变为1)</br>
+    账号: <input type="text" name="username"></br>
+    <input type="submit" value="删除">
+</form>
+<form method="post" action="http://localhost:8888/user/resetUserpassword">
+    用户重置(重置后的明文密码为12345678)</br>
+    账号: <input type="text" name="username"></br>
+    <input type="submit" value="重置">
+</form><br/>
+
+
+
+
+<h2 align="center">图书章节添加</h2>
+通过excel表格插入整本图书的章节信息<br/>
+<form method="post" action="http://localhost:8888/chapter/import" enctype="multipart/form-data">
+<input type="file" name="filename">
+    关联图书:<input type="text" name="bookName">
+<input type="submit" value="提交">
+</form>
+<a href="http://localhost:8888/chapter/getChapter">获取章节信息</a>
+
+<h2 align="center">图书添加</h2>
+<form method="post" action="http://localhost:8888/book/add" enctype="multipart/form-data">
+
+    图书照片上传  <input type="file" name="img"></br><br/>
+    书名: <input name="bookName" type="text"><br/>
+    作者 <input name="author"><br/>
+    朝代 <input name="dynasty"><br/>
+    介绍 <input name="introduction"><br/>
+<!--    类型   <input name="bookType"><br/>-->
+    <input type="submit" value="提交"></br>
+</form>
+<form action="http://localhost:8888/original/deleteImg" method="post">
+   imgId <input type="text" name="imgId"><br/>
+    imgUrl<input type="text" name="imgUrl"><br/>
+    <input type="submit" value="删除图片">
+</form>
+
+<h2>通过excel表导入异文信息</h2>
+<form method="post" action="http://localhost:8888/diff/addDiffByExcel" enctype="multipart/form-data">
+    diffFrom<input type="file" name="diffFrom"><br/>
+    diffTo<input type="file" name="diffTo"><br/>
+    diffConnect<input type="file" name="diffConnect"><br/>
+    <input type="submit" value="提交">
+</form>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dms.guyiyao.mapper.TsBookOrginalMapper">
+<select id="getOriginal" resultType="com.dms.guyiyao.pojo.ContentOriginal">
+    SELECT a.sequence as outSequence, content,b.sequence as inSequence,c.imgurl FROM ts_book_content_ori as a,ts_book_content_orginal as b,ts_book_orginal as c
+    WHERE a.id=#{originalId}
+      and  a.id=b.ts_book_content_id
+      and b.ts_book_orginal_id=c.id order by outSequence,inSequence
+</select>
+    <select id="getOriginalId" resultType="String">
+        SELECT id from ts_book_content_ori WHERE ts_book_chapter_id=#{chapterId} and status=0 order by sequence
+    </select>
+</mapper>

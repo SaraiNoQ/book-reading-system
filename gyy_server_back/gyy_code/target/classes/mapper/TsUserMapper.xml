@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dms.guyiyao.mapper.TsUserMapper">
+<resultMap id="PageMap" type="com.dms.guyiyao.pojo.page.PageV0">
+<result column="total" property="total"></result>
+<collection property="data" ofType="com.dms.guyiyao.pojo.user.TsUser_0">
+<id column="id" property="id"></id>
+    <result column="nickname" property="nickname"></result>
+    <result column="username" property="username"></result>
+    <result column="password" property="password"></result>
+    <result column="email" property="email"></result>
+    <result column="usertype" property="usertype"></result>
+</collection>
+</resultMap>
+<!--    <select id="searchForUser"  resultMap="PageMap" >-->
+<!--        select id,nickname,username,password,email,usertype-->
+<!--             ,(select count(*) as total from ts_user-->
+<!--             where (status=0 and username=#{username}) or (status=0 and nickname=#{nickname}) or (status=0 and email=#{email}))-->
+<!--                 as total-->
+<!--        from ts_user-->
+<!--        where (status=0 and username=#{username}) or (status=0 and nickname=#{nickname}) or (status=0 and email=#{email})-->
+<!--            limit #{page},#{size};-->
+
+<!--</select>-->
+<!--    <select id="searchForUser"  resultMap="PageMap">-->
+<!--        select count(*) as total from ts_user where (status=0 and username=#{username}) or (status=0 and nickname=#{nickname}) or (status=0 and email=#{email});-->
+<!--    </select>-->
+    <select id="containEmail" resultType="Integer">
+        SELECT COUNT(*) FROM ts_user WHERE email=#{email} and status='0'
+    </select>
+    <select id="containUser" resultType="Integer">
+        SELECT COUNT(*) FROM ts_user WHERE username=#{username} and status='0'
+    </select>
+
+
+    <select id="searchForUser"  resultType="com.dms.guyiyao.pojo.user.TsUser_0" >
+        select id,nickname,username,password,email,usertype
+        from ts_user
+        <where>
+            <if test="username!=null">username like concat('%',#{username},'%')</if>
+            <if test="nickname!=null">and nickname like concat('%',#{nickname},'%')</if>
+            <if test="email!=null">and email like concat('%',#{email},'%')</if>
+            and status=0 limit #{page},#{size}
+        </where>
+    </select>
+    <select id="searchForUser_count" resultType="Long">
+        select count(*)
+        from ts_user
+        <where>
+            <if test="username!=null">username like concat('%',#{username},'%')</if>
+            <if test="nickname!=null">and nickname like concat('%',#{nickname},'%')</if>
+            <if test="email!=null">and email like concat('%',#{email},'%')</if>
+            and status=0
+        </where>
+    </select>
+
+    <select id="getUser" resultType="com.dms.guyiyao.pojo.entity.User">
+        select  id ,userName,password,usertype as userType from ts_user where userName=#{userName} or email=#{username}
+    </select>
+
+</mapper>

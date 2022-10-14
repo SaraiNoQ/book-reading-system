@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align="center">测试页面</h1>
+<div align="center" >
+<a  href="http://localhost:8099/loginPage.html">登录</a> &nbsp;
+<a  href="http://localhost/logout">注销</a>        </br>
+<a  href="http://localhost/registPage.html">注册(当前demo不可用,参数信息需在body内部)</a></br>
+<a  href="http://localhost/secrectPage.html">需要登录才能访问的页面</a></br>
+<a href="http://localhost/book/getBookInfo/1/1">获取首页图书信息(默认page size 都为1)</a>
+    <br/><br/>
+
+<form method="post" action="http://localhost/file/uploadUserImg" enctype="multipart/form-data">
+    用户头像上传<br/>
+    用户名:&nbsp;<input type="text" name="user">
+    <input type="file" name="uploadFile"></br>
+    <input type="submit" value="提交">
+</form>
+    <br/><br/>
+    <form method="post" action="http://localhost/file/uploadBookImg" enctype="multipart/form-data">
+    图书照片上传<br/>
+    图书名:&nbsp;<input type="text" name="book">
+    <input type="file" name="uploadFile"></br>
+    <input type="submit" value="提交"></br>
+        <a href="http://localhost/bookChapter/getChapter/备急千金药方">获取备急千金药方的目录</a>
+</form>
+    <br>
+<a href="http://localhost/book/bookContent/56768">获取章节id为56768的内容</a>
+<br>
+</div>
+
+<form action="http://localhost:8099/user/getUserInfo" method="post">
+    <input type="submit">
+</form>
+</body>
+</html>

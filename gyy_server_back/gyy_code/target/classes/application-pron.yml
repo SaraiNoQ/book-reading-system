@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    username: root
+    password: (03T-7z4hqdjt2LRE[GB!ZfM;9s%lS77
+    url: jdbc:mysql://10.6.50.239:3306/reader?useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      auto-commit: true

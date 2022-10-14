@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dms.guyiyao.mapper.TsBookMapper">
+<insert id="addBook"  >
+    INSERT INTO ts_book
+        (`id`,`code`, `introduction`, `bookname`, `author`, `dynasty`, `createrid`, `createtime`)
+        select REPLACE(UUID(),'-',''),#{code},#{introduction}, #{bookName}, #{author}, #{dynasty}, id, #{addTime}
+        from ts_user where  username=#{bookCreater}
+</insert>
+    <select id="getBookNum" resultType="Integer">
+        SELECT COUNT(*) FROM ts_book
+    </select>
+    <select id="getBookCode" resultType="String">
+        select code from  ts_book where  bookname=#{bookName} and status=0
+    </select>
+    <select id="getBookName" resultType="String">
+        SELECT bookname FROM ts_book WHERE `status`=0
+    </select>
+    <update id="deleteBook" >
+        UPDATE
+            ts_book as a
+            left join
+            ts_book_chapter as b on a.id=b.ts_book_id
+            LEFT JOIN
+            ts_book_content as c on b.id=c.ts_book_chapter_id
+            LEFT JOIN
+            ts_book_content_type as d on b.id=d.chapter_id
+            set a.status=1,b.status=1,c.status=1,d.status=1,
+                a.lastupdate_by_id=#{opUser},b.lastupdate_by_id=#{opUser},c.lastupdate_by_id=#{opUser},d.lastupdate_by_id=#{opUser},
+                a.lastupdatetime=#{opTime},b.lastupdatetime=#{opTime},c.lastupdatetime=#{opTime},d.lastupdatetime=#{opTime}
+        WHERE a.id=#{bookId}
+
+    </update>
+
+    <select id="getBookInfo_chapter" resultType="com.dms.guyiyao.pojo.book.TsBook">
+        SELECT id,bookname FROM ts_book WHERE `status`=0
+    </select>
+    <select id="getBookCodes" resultType="String">
+        SELECT `code` FROM ts_book WHERE `status`=0
+    </select>
+    <insert id="updateBook">
+        update ts_book set bookname=#{bookName},author=#{author},dynasty=#{dunasty},introduction=#{introduction},`sequence`=#{sequence}
+            where  id=#{id}
+    </insert>
+    <update id="updateBookImg">
+        update ts_book set imgurl=#{imgUrl} where  id=#{id}
+    </update>
+    <select id="getBookNameById" resultType="String">
+        select  bookname from  ts_book where  id=#{id} and status=0
+    </select>
+
+</mapper>

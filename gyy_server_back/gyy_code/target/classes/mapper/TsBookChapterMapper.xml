@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dms.guyiyao.mapper.TsBookChapterMapper">
+<insert id="addChapterByExcel" parameterType="com.dms.guyiyao.pojo.chapter.Chapter_db" >
+    INSERT  INTO
+        ts_book_chapter(id,ts_book_id,parentid,chapter_name,grade,sequence,create_by_id,createtime)
+        select
+               #{chapter_id}, id ,#{chapter_id_parent},#{chapter_name},#{grade},#{sequence},#{opUser},#{opTime}
+            FROM ts_book WHERE bookname=#{bookName} and status=0
+</insert>
+<!--    <insert id="addChapterByExcel" parameterType="com.dms.guyiyao.pojo.chapter.Chapter_db">-->
+<!--    INSERT  INTO-->
+<!--        ts_book_chapter(id,ts_book_id,parentid,chapter_name,grade,sequence)-->
+<!--        values-->
+<!--               (REPLACE(UUID(),'-',''),#{chapter_id},#{chapter_id_parent},#{chapter_name},#{grade},#{sequence})-->
+<!--</insert>-->
+    <select id="getChapter" resultType="com.dms.guyiyao.pojo.chapter.CataLog">
+        SELECT id,parentid,sequence,grade,chapter_name as chapter FROM ts_book_chapter
+        WHERE
+            parentid=#{id} and status=0 order by sequence
+    </select>
+    <select id="getChapter_grade_1" resultType="com.dms.guyiyao.pojo.chapter.CataLog">
+        SELECT id,parentid,sequence,grade,chapter_name as chapter FROM ts_book_chapter
+        WHERE
+            grade=1  and ts_book_id=any(SELECT id FROM ts_book WHERE bookname=#{bookName}) and status=0 order by sequence
+    </select>
+
+    <select id="getFullCataLog" resultType="com.dms.guyiyao.pojo.chapter.FullCataLog">
+        SELECT bookname,parentid,chapter_name as chaptername FROM  ts_book inner  JOIN  ts_book_chapter on ts_book.id=ts_book_chapter.ts_book_id
+            AND ts_book_chapter.id=#{chapterId}
+    </select>
+    <update id="updateChpter">
+        UPDATE ts_book_chapter set parentid=#{parentid}
+                                 ,chapter_name=#{chapterName},sequence=#{sequence},grade=#{grade},lastupdatetime=#{opTime},lastupdate_by_id=#{opUser} WHERE id=#{id}
+    </update>
+    <update id="deleteChapter">
+        UPDATE
+            ts_book_chapter as b
+            LEFT JOIN
+            ts_book_content as c on b.id=c.ts_book_chapter_id
+            LEFT JOIN
+            ts_book_content_type as d on b.id=d.chapter_id
+            set b.status=1,c.status=1,d.status=1,b.lastupdate_by_id=#{opUser},c.lastupdate_by_id=#{opUser},d.lastupdate_by_id=#{opUser},
+                    b.lastupdatetime=#{opTime},c.lastupdatetime=#{opTime},d.lastupdatetime=#{opTime}
+            WHERE b.id=#{id}
+    </update>
+    <insert id="addChapterByUser">
+        INSERT INTO ts_book_chapter(ts_book_id,id,parentid,chapter_name,sequence,grade,createtime,create_by_id)
+        values(#{bookid},REPLACE(UUID(),'-',''),#{parentid},#{chapterName},#{sequence},#{grade},#{opTime},#{opUser})
+    </insert>
+
+<select id="getChapterNode" resultType="com.dms.guyiyao.pojo.TreeNode">
+    SELECT a.id,b.id as bookId,a.parentid,a.chapter_name as chapter,a.Id,a.sequence,a.grade
+    FROM ts_book_chapter as a,ts_book as b
+    WHERE a.ts_book_id=b.id and b.bookname=#{bookName} and a.status=0 and b.status=0 ORDER BY a.grade,a.sequence
+</select>
+
+    <insert id="addRootChapter">
+        insert into ts_book_chapter(id,ts_book_id,grade,sequence,chapter_name)
+        select  #{id},id,'0',0,CONCAT(#{bookName},'目录')
+        from ts_book where  bookName=#{bookName} and status=0
+</insert>
+
+    <select id="getBoodeCodes">
+        SELECT `code` FROM ts_book WHERE `status`=0
+    </select>
+    <update id="updateRootChapter" >
+        update ts_book_chapter set chapter_name=CONCAT(#{bookName},'目录') where ts_book_id=#{id} and grade='0' and status=0
+    </update>
+
+</mapper>

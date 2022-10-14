@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dms.guyiyao.mapper.TcCodeMapper">
+<select id="getDynasty" resultType="String">
+    SELECT name FROM tc_code WHERE type='dynasty'
+</select>
+</mapper>

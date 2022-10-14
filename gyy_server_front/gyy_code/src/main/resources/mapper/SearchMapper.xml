@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dms.guyiyao.mapper.SeachMapper">
+<select id="seachBookNameByContentId" resultType="String">
+    select bookname
+    from ts_book as a,ts_book_chapter as b,ts_book_content as c
+    where a.id=b.ts_book_id
+    and b.id=c.ts_book_chapter_id
+    and c.id=#{contentId};
+</select>
+</mapper>

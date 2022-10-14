@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dms.guyiyao.mapper.TsBookOrginalMapper">
+<select id="getPicUrl" resultType="com.dms.guyiyao.pojo.book.TsBookOrginal">
+    SELECT * FROM `ts_book_orginal` WHERE ts_book_chapter_id=#{chapterId} and status=0 ORDER BY sequence
+</select>
+    <update id="deleteImgUrl">
+        UPDATE ts_book_orginal set status=1 WHERE id=#{imgId}
+    </update>
+
+    <insert id="addImg" >
+        INSERT into ts_book_orginal (id,ts_book_chapter_id,imgname,imgurl)VALUES(REPLACE(UUID(),'-',''),#{chapterId},#{imgName},#{imgUrl})
+    </insert>
+    <insert id="addMatch_1" >
+        INSERT into ts_book_content_ori(id,ts_book_chapter_id,content,sequence)VALUES(#{contentId},#{chapterId},#{content},#{sequence});
+    </insert>
+    <insert id="addMatch_2" >
+        insert into ts_book_content_orginal(id,ts_book_content_id,ts_book_orginal_id,sequence)values(REPLACE(UUID(),'-',''),#{contentId},#{imgId},#{sequence});
+    </insert>
+    <select id="getOriginal" resultType="com.dms.guyiyao.pojo.original.ContentOriginal">
+        SELECT a.sequence as outSequence,a.id as outId, content,b.sequence as inSequence,c.id as inId,c.imgname,c.imgurl FROM ts_book_content_ori as a,ts_book_content_orginal as b,ts_book_orginal as c
+        WHERE a.id=#{originalId}
+          and  a.id=b.ts_book_content_id
+          and b.ts_book_orginal_id=c.id order by outSequence,inSequence
+    </select>
+    <select id="getOriginalId" resultType="String">
+        SELECT id from ts_book_content_ori WHERE ts_book_chapter_id=#{chapterId} and status=0 order by sequence
+    </select>
+
+    <delete id="deleteMatch">
+call deleteOriginMathch(#{chapterId},#{sequence});
+    </delete>
+</mapper>

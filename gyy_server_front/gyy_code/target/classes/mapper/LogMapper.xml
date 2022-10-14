@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dms.guyiyao.mapper.LogMapper">
+    <insert id="loginFailException">
+        INSERT into ExceptionLog(id,url,user,ip,Exception,param,type,time,server)VALUES(REPLACE(UUID(),'-',''),#{url},#{user},#{ip},#{exception},#{param},#{type},#{time},#{server})
+    </insert>
+    <insert id="CommonException">
+        INSERT into ExceptionLog(id,url,user,ip,Exception,param,type,time,server)VALUES(REPLACE(UUID(),'-',''),#{url},#{user},#{ip},#{exception},#{param},#{type},#{time},#{server})
+    </insert>
+</mapper>

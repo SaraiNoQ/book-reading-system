@@ -1,0 +1,815 @@
+<<<<<<< HEAD
+2022-09-07 11:25:33.110 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting DemoApplication using Java 1.8.0_311 on DESKTOP-EI2Q46S with PID 15960 (E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back\gyy_code\target\classes started by 11641 in E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back)
+2022-09-07 11:25:33.125 - INFO  [  restartedMain] o.s.b.SpringApplication        : The following profiles are active: dev
+2022-09-07 11:25:33.254 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-07 11:25:33.255 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-07 11:25:35.555 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 11:25:35.557 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-07 11:25:35.596 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 0 Elasticsearch repository interfaces.
+2022-09-07 11:25:35.600 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 11:25:35.600 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-07 11:25:35.608 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-07 11:25:35.620 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 11:25:35.621 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-07 11:25:35.635 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2022-09-07 11:25:36.996 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8888 (http)
+2022-09-07 11:25:37.012 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8888"]
+2022-09-07 11:25:37.013 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2022-09-07 11:25:37.013 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-09-07 11:25:37.146 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2022-09-07 11:25:37.146 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3884 ms
+2022-09-07 11:25:38.115 - WARN  [  restartedMain] c.b.m.c.m.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dms.guyiyao.pojo.PersistentLogins.
+2022-09-07 11:25:40.154 - INFO  [  restartedMain] redAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.util.List com.dms.guyiyao.controller.TsBookChapterController.getCatLog()
+2022-09-07 11:25:40.196 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Starting...
+2022-09-07 11:25:40.210 - WARN  [  restartedMain] c.z.h.u.DriverDataSource       : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-09-07 11:25:41.939 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Start completed.
+2022-09-07 11:25:44.163 - INFO  [  restartedMain] edRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-09-07 11:25:44.546 - INFO  [  restartedMain] s.w.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57fca111, org.springframework.security.web.context.SecurityContextPersistenceFilter@2ed94c75, org.springframework.security.web.header.HeaderWriterFilter@66842220, org.springframework.security.web.authentication.logout.LogoutFilter@6a89178a, com.dms.guyiyao.security.filter.JwtAuthenticationTokenFilter@29c07fdd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@48916ab5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f5b543c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57670148, org.springframework.security.web.session.SessionManagementFilter@369a6b2f, org.springframework.security.web.access.ExceptionTranslationFilter@7619b132, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@790bd106]
+2022-09-07 11:25:44.938 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2022-09-07 11:25:44.988 - INFO  [  restartedMain] .w.s.WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2022-09-07 11:25:45.998 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8888"]
+2022-09-07 11:25:46.031 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8888 (http) with context path ''
+2022-09-07 11:25:46.032 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Context refreshed
+2022-09-07 11:25:46.078 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-09-07 11:25:46.129 - INFO  [  restartedMain] w.s.ApiListingReferenceScanner : Scanning for api listing references
+2022-09-07 11:25:46.351 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-07 11:25:46.375 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-07 11:25:46.505 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started DemoApplication in 13.891 seconds (JVM running for 16.615)
+2022-09-07 11:25:58.515 - INFO  [nio-8888-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-07 11:25:58.515 - INFO  [nio-8888-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2022-09-07 11:25:58.516 - INFO  [nio-8888-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 1 ms
+2022-09-07 11:26:01.296 - INFO  [nio-8888-exec-1] c.d.g.s.I.LoginServiceImpl     : 
+Ip:【127.0.0.1】用户名:【robin】,密码：【mima12345】登录成功
+2022-09-07 11:26:21.291 - INFO  [xecutorLoop-1-2] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 11:26:21.432 - INFO  [ioEventLoop-4-2] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 11:26:41.486 - INFO  [xecutorLoop-1-3] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 11:26:41.629 - INFO  [ioEventLoop-4-3] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 11:26:45.237 - INFO  [nio-8888-exec-2] f.JwtAuthenticationTokenFilter : token格式合法开始获取redis中的用户信息
+2022-09-07 11:26:45.294 - INFO  [nio-8888-exec-2] f.JwtAuthenticationTokenFilter : Redis中命中到对应用户
+2022-09-07 11:26:45.294 - INFO  [nio-8888-exec-2] f.JwtAuthenticationTokenFilter : 放行信息放入过滤链成功
+2022-09-07 11:26:45.330 - INFO  [nio-8888-exec-2] c.d.g.c.TsUserController       : 用户id生成成功
+2022-09-07 11:27:01.692 - INFO  [xecutorLoop-1-5] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 11:27:01.836 - INFO  [ioEventLoop-4-4] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 11:27:21.896 - INFO  [xecutorLoop-1-6] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 11:27:22.061 - INFO  [ioEventLoop-4-5] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 11:27:34.325 - INFO  [      Thread-27] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown initiated...
+2022-09-07 11:27:34.346 - INFO  [      Thread-27] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown completed.
+2022-09-07 11:27:34.737 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting DemoApplication using Java 1.8.0_311 on DESKTOP-EI2Q46S with PID 15960 (E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back\gyy_code\target\classes started by 11641 in E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back)
+2022-09-07 11:27:34.738 - INFO  [  restartedMain] o.s.b.SpringApplication        : The following profiles are active: dev
+2022-09-07 11:27:35.085 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 11:27:35.086 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-07 11:27:35.103 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Elasticsearch repository interfaces.
+2022-09-07 11:27:35.104 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 11:27:35.104 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-07 11:27:35.111 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-07 11:27:35.114 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 11:27:35.114 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-07 11:27:35.122 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2022-09-07 11:27:35.367 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8888 (http)
+2022-09-07 11:27:35.368 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8888"]
+2022-09-07 11:27:35.368 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2022-09-07 11:27:35.368 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-09-07 11:27:35.404 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2022-09-07 11:27:35.404 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 663 ms
+2022-09-07 11:27:35.489 - WARN  [  restartedMain] c.b.m.c.m.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dms.guyiyao.pojo.PersistentLogins.
+2022-09-07 11:27:37.089 - INFO  [  restartedMain] redAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.util.List com.dms.guyiyao.controller.TsBookChapterController.getCatLog()
+2022-09-07 11:27:37.104 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-2 - Starting...
+2022-09-07 11:27:37.104 - WARN  [  restartedMain] c.z.h.u.DriverDataSource       : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-09-07 11:27:37.712 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-2 - Start completed.
+2022-09-07 11:27:38.340 - INFO  [  restartedMain] edRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-09-07 11:27:38.392 - INFO  [  restartedMain] s.w.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40e3c355, org.springframework.security.web.context.SecurityContextPersistenceFilter@7e1baf1a, org.springframework.security.web.header.HeaderWriterFilter@520e9269, org.springframework.security.web.authentication.logout.LogoutFilter@14d36d0d, com.dms.guyiyao.security.filter.JwtAuthenticationTokenFilter@3a2c2aca, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1172ac16, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@37c9f98b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74fcc477, org.springframework.security.web.session.SessionManagementFilter@58cb123a, org.springframework.security.web.access.ExceptionTranslationFilter@4a94a245, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5ed699e0]
+2022-09-07 11:27:38.463 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2022-09-07 11:27:38.471 - INFO  [  restartedMain] .w.s.WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2022-09-07 11:27:38.674 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8888"]
+2022-09-07 11:27:38.676 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8888 (http) with context path ''
+2022-09-07 11:27:38.677 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Context refreshed
+2022-09-07 11:27:38.678 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-09-07 11:27:38.681 - INFO  [  restartedMain] w.s.ApiListingReferenceScanner : Scanning for api listing references
+2022-09-07 11:27:38.706 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-07 11:27:38.720 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-07 11:27:38.769 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started DemoApplication in 4.085 seconds (JVM running for 128.878)
+2022-09-07 11:27:38.771 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-09-07 11:27:41.062 - INFO  [      Thread-35] c.z.h.HikariDataSource         : HikariPool-2 - Shutdown initiated...
+2022-09-07 11:27:41.520 - INFO  [      Thread-35] c.z.h.HikariDataSource         : HikariPool-2 - Shutdown completed.
+2022-09-07 11:27:41.881 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting DemoApplication using Java 1.8.0_311 on DESKTOP-EI2Q46S with PID 15960 (E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back\gyy_code\target\classes started by 11641 in E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back)
+2022-09-07 11:27:41.883 - INFO  [  restartedMain] o.s.b.SpringApplication        : The following profiles are active: dev
+2022-09-07 11:27:42.285 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 11:27:42.285 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-07 11:27:42.303 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 0 Elasticsearch repository interfaces.
+2022-09-07 11:27:42.304 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 11:27:42.304 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-07 11:27:42.312 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-07 11:27:42.316 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 11:27:42.316 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-07 11:27:42.324 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2022-09-07 11:27:42.463 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8888 (http)
+2022-09-07 11:27:42.463 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8888"]
+2022-09-07 11:27:42.464 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2022-09-07 11:27:42.464 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-09-07 11:27:42.506 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2022-09-07 11:27:42.506 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 620 ms
+2022-09-07 11:27:42.641 - WARN  [  restartedMain] c.b.m.c.m.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dms.guyiyao.pojo.PersistentLogins.
+2022-09-07 11:27:43.647 - INFO  [  restartedMain] redAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.util.List com.dms.guyiyao.controller.TsBookChapterController.getCatLog()
+2022-09-07 11:27:43.659 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-3 - Starting...
+2022-09-07 11:27:43.659 - WARN  [  restartedMain] c.z.h.u.DriverDataSource       : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-09-07 11:27:44.266 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-3 - Start completed.
+2022-09-07 11:27:44.814 - INFO  [  restartedMain] edRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-09-07 11:27:44.846 - INFO  [  restartedMain] s.w.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@427dd1dc, org.springframework.security.web.context.SecurityContextPersistenceFilter@56bd617c, org.springframework.security.web.header.HeaderWriterFilter@9cb16a, org.springframework.security.web.authentication.logout.LogoutFilter@7554a864, com.dms.guyiyao.security.filter.JwtAuthenticationTokenFilter@538dda20, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@330793d4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56f5633f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@798c2395, org.springframework.security.web.session.SessionManagementFilter@52e99ba8, org.springframework.security.web.access.ExceptionTranslationFilter@4ae5e758, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@156b530b]
+2022-09-07 11:27:44.889 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2022-09-07 11:27:44.897 - INFO  [  restartedMain] .w.s.WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2022-09-07 11:27:45.029 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8888"]
+2022-09-07 11:27:45.030 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8888 (http) with context path ''
+2022-09-07 11:27:45.031 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Context refreshed
+2022-09-07 11:27:45.032 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-09-07 11:27:45.035 - INFO  [  restartedMain] w.s.ApiListingReferenceScanner : Scanning for api listing references
+2022-09-07 11:27:45.053 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-07 11:27:45.061 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-07 11:27:45.104 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started DemoApplication in 3.274 seconds (JVM running for 135.212)
+2022-09-07 11:27:45.105 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+=======
+2022-09-05 00:00:52.087 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting DemoApplication using Java 1.8.0_311 on DESKTOP-EI2Q46S with PID 21924 (E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back\gyy_code\target\classes started by 11641 in E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back)
+2022-09-05 00:00:52.123 - INFO  [  restartedMain] o.s.b.SpringApplication        : The following profiles are active: dev
+2022-09-05 00:00:52.171 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-05 00:00:52.172 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-05 00:00:53.321 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-05 00:00:53.323 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-05 00:00:53.349 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 Elasticsearch repository interfaces.
+2022-09-05 00:00:53.353 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-05 00:00:53.353 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-05 00:00:53.363 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-05 00:00:53.376 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-05 00:00:53.378 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-05 00:00:53.392 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2022-09-05 00:00:54.145 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8888 (http)
+2022-09-05 00:00:54.152 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8888"]
+2022-09-05 00:00:54.153 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2022-09-05 00:00:54.153 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-09-05 00:00:54.266 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2022-09-05 00:00:54.267 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2070 ms
+2022-09-05 00:00:54.814 - WARN  [  restartedMain] c.b.m.c.m.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dms.guyiyao.pojo.PersistentLogins.
+2022-09-05 00:00:56.657 - INFO  [  restartedMain] redAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.util.List com.dms.guyiyao.controller.TsBookChapterController.getCatLog()
+2022-09-05 00:00:56.699 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Starting...
+2022-09-05 00:00:56.700 - WARN  [  restartedMain] c.z.h.u.DriverDataSource       : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-09-05 00:00:58.321 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Start completed.
+2022-09-05 00:00:59.652 - INFO  [  restartedMain] edRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-09-05 00:00:59.783 - INFO  [  restartedMain] s.w.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@84ae73d, org.springframework.security.web.context.SecurityContextPersistenceFilter@54ad083b, org.springframework.security.web.header.HeaderWriterFilter@5b7d67d0, org.springframework.security.web.authentication.logout.LogoutFilter@669410dd, com.dms.guyiyao.security.filter.JwtAuthenticationTokenFilter@5185d85f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25fc1dad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@661c93a2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d105947, org.springframework.security.web.session.SessionManagementFilter@7673b9b7, org.springframework.security.web.access.ExceptionTranslationFilter@289da46, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@13ccc058]
+2022-09-05 00:00:59.942 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2022-09-05 00:00:59.969 - INFO  [  restartedMain] .w.s.WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2022-09-05 00:01:00.389 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8888"]
+2022-09-05 00:01:00.398 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8888 (http) with context path ''
+2022-09-05 00:01:00.399 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Context refreshed
+2022-09-05 00:01:00.419 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-09-05 00:01:00.456 - INFO  [  restartedMain] w.s.ApiListingReferenceScanner : Scanning for api listing references
+2022-09-05 00:01:00.594 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-05 00:01:00.617 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-05 00:01:00.720 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started DemoApplication in 9.116 seconds (JVM running for 11.914)
+2022-09-05 00:02:15.002 - INFO  [nio-8888-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-05 00:02:15.002 - INFO  [nio-8888-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2022-09-05 00:02:15.003 - INFO  [nio-8888-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 1 ms
+2022-09-05 00:02:21.446 - INFO  [nio-8888-exec-1] c.d.g.s.I.LoginServiceImpl     : 
+Ip:【127.0.0.1】用户名:【dddddd】,密码：【mima12345】登录成功
+2022-09-05 00:02:41.503 - INFO  [xecutorLoop-1-2] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:02:41.642 - INFO  [ioEventLoop-4-2] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:03:01.698 - INFO  [xecutorLoop-1-3] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:03:01.858 - INFO  [ioEventLoop-4-3] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:03:19.560 - INFO  [nio-8888-exec-2] f.JwtAuthenticationTokenFilter : token格式合法开始获取redis中的用户信息
+2022-09-05 00:03:19.625 - INFO  [nio-8888-exec-2] f.JwtAuthenticationTokenFilter : Redis中命中到对应用户
+2022-09-05 00:03:19.625 - INFO  [nio-8888-exec-2] f.JwtAuthenticationTokenFilter : 放行信息放入过滤链成功
+2022-09-05 00:03:21.897 - INFO  [xecutorLoop-1-5] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:03:22.042 - INFO  [ioEventLoop-4-4] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:03:42.098 - INFO  [xecutorLoop-1-6] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:03:42.249 - INFO  [ioEventLoop-4-5] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:03:43.466 - INFO  [nio-8888-exec-3] f.JwtAuthenticationTokenFilter : token格式合法开始获取redis中的用户信息
+2022-09-05 00:03:43.517 - INFO  [nio-8888-exec-3] f.JwtAuthenticationTokenFilter : Redis中命中到对应用户
+2022-09-05 00:03:43.517 - INFO  [nio-8888-exec-3] f.JwtAuthenticationTokenFilter : 放行信息放入过滤链成功
+2022-09-05 00:04:02.297 - INFO  [xecutorLoop-1-8] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:04:02.439 - INFO  [ioEventLoop-4-6] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:04:22.515 - INFO  [xecutorLoop-1-1] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:04:22.682 - INFO  [ioEventLoop-4-7] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:04:42.702 - INFO  [xecutorLoop-1-2] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:04:42.853 - INFO  [ioEventLoop-4-8] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:05:02.902 - INFO  [xecutorLoop-1-3] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:05:03.069 - INFO  [ioEventLoop-4-1] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:05:23.097 - INFO  [xecutorLoop-1-4] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:05:23.232 - INFO  [ioEventLoop-4-2] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:05:43.299 - INFO  [xecutorLoop-1-5] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:05:43.449 - INFO  [ioEventLoop-4-3] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:06:03.497 - INFO  [xecutorLoop-1-6] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:06:03.658 - INFO  [ioEventLoop-4-4] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:06:21.278 - INFO  [ionShutdownHook] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown initiated...
+2022-09-05 00:06:21.293 - INFO  [ionShutdownHook] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown completed.
+2022-09-05 00:06:30.818 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting DemoApplication using Java 1.8.0_311 on DESKTOP-EI2Q46S with PID 22776 (E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back\gyy_code\target\classes started by 11641 in E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back)
+2022-09-05 00:06:30.826 - INFO  [  restartedMain] o.s.b.SpringApplication        : The following profiles are active: dev
+2022-09-05 00:06:30.866 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-05 00:06:30.866 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-05 00:06:31.756 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-05 00:06:31.758 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-05 00:06:31.784 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 Elasticsearch repository interfaces.
+2022-09-05 00:06:31.787 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-05 00:06:31.788 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-05 00:06:31.796 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-05 00:06:31.807 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-05 00:06:31.808 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-05 00:06:31.823 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2022-09-05 00:06:32.642 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8888 (http)
+2022-09-05 00:06:32.653 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8888"]
+2022-09-05 00:06:32.654 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2022-09-05 00:06:32.654 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-09-05 00:06:32.811 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2022-09-05 00:06:32.812 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1945 ms
+2022-09-05 00:06:33.445 - WARN  [  restartedMain] c.b.m.c.m.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dms.guyiyao.pojo.PersistentLogins.
+2022-09-05 00:06:35.908 - INFO  [  restartedMain] redAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.util.List com.dms.guyiyao.controller.TsBookChapterController.getCatLog()
+2022-09-05 00:06:35.951 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Starting...
+2022-09-05 00:06:35.952 - WARN  [  restartedMain] c.z.h.u.DriverDataSource       : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-09-05 00:06:37.722 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Start completed.
+2022-09-05 00:06:39.055 - INFO  [  restartedMain] edRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-09-05 00:06:39.166 - INFO  [  restartedMain] s.w.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65ad5c00, org.springframework.security.web.context.SecurityContextPersistenceFilter@1c5281db, org.springframework.security.web.header.HeaderWriterFilter@68f16463, org.springframework.security.web.authentication.logout.LogoutFilter@7d079b43, com.dms.guyiyao.security.filter.JwtAuthenticationTokenFilter@6353ac7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a7a9e04, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@322a552b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2f26ede0, org.springframework.security.web.session.SessionManagementFilter@5bdafb94, org.springframework.security.web.access.ExceptionTranslationFilter@397f1a09, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2882867a]
+2022-09-05 00:06:39.327 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2022-09-05 00:06:39.352 - INFO  [  restartedMain] .w.s.WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2022-09-05 00:06:39.785 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8888"]
+2022-09-05 00:06:39.793 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8888 (http) with context path ''
+2022-09-05 00:06:39.795 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Context refreshed
+2022-09-05 00:06:39.812 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-09-05 00:06:39.846 - INFO  [  restartedMain] w.s.ApiListingReferenceScanner : Scanning for api listing references
+2022-09-05 00:06:39.984 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-05 00:06:40.007 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-05 00:06:40.119 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started DemoApplication in 9.74 seconds (JVM running for 12.632)
+2022-09-05 00:06:51.594 - INFO  [nio-8888-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-05 00:06:51.594 - INFO  [nio-8888-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2022-09-05 00:06:51.596 - INFO  [nio-8888-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 2 ms
+2022-09-05 00:06:51.665 - INFO  [nio-8888-exec-1] f.JwtAuthenticationTokenFilter : token格式合法开始获取redis中的用户信息
+2022-09-05 00:06:54.630 - INFO  [nio-8888-exec-1] f.JwtAuthenticationTokenFilter : Redis中命中到对应用户
+2022-09-05 00:06:54.631 - INFO  [nio-8888-exec-1] f.JwtAuthenticationTokenFilter : 放行信息放入过滤链成功
+2022-09-05 00:07:14.576 - INFO  [xecutorLoop-1-2] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:07:14.720 - INFO  [ioEventLoop-4-2] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:07:37.011 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting DemoApplication using Java 1.8.0_311 on DESKTOP-EI2Q46S with PID 7900 (E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back\gyy_code\target\classes started by 11641 in E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back)
+2022-09-05 00:07:37.023 - INFO  [  restartedMain] o.s.b.SpringApplication        : The following profiles are active: dev
+2022-09-05 00:07:37.101 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-05 00:07:37.101 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-05 00:07:38.435 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-05 00:07:38.438 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-05 00:07:38.480 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 0 Elasticsearch repository interfaces.
+2022-09-05 00:07:38.487 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-05 00:07:38.488 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-05 00:07:38.504 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-05 00:07:38.524 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-05 00:07:38.525 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-05 00:07:38.550 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-09-05 00:07:39.880 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8888 (http)
+2022-09-05 00:07:39.934 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8888"]
+2022-09-05 00:07:39.935 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2022-09-05 00:07:39.935 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-09-05 00:07:40.190 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2022-09-05 00:07:40.190 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3088 ms
+2022-09-05 00:07:40.985 - WARN  [  restartedMain] c.b.m.c.m.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dms.guyiyao.pojo.PersistentLogins.
+2022-09-05 00:07:43.556 - INFO  [  restartedMain] redAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.util.List com.dms.guyiyao.controller.TsBookChapterController.getCatLog()
+2022-09-05 00:07:43.615 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Starting...
+2022-09-05 00:07:43.617 - WARN  [  restartedMain] c.z.h.u.DriverDataSource       : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-09-05 00:07:45.454 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Start completed.
+2022-09-05 00:07:47.004 - INFO  [  restartedMain] edRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-09-05 00:07:47.149 - INFO  [  restartedMain] s.w.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b91c527, org.springframework.security.web.context.SecurityContextPersistenceFilter@453bc015, org.springframework.security.web.header.HeaderWriterFilter@1efffc5a, org.springframework.security.web.authentication.logout.LogoutFilter@3d6e479, com.dms.guyiyao.security.filter.JwtAuthenticationTokenFilter@19dac90c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e3aafa6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24588e3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43c204e8, org.springframework.security.web.session.SessionManagementFilter@b895694, org.springframework.security.web.access.ExceptionTranslationFilter@19f42412, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@73628fa2]
+2022-09-05 00:07:47.331 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2022-09-05 00:07:47.372 - INFO  [  restartedMain] .w.s.WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2022-09-05 00:07:47.864 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8888"]
+2022-09-05 00:07:47.875 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8888 (http) with context path ''
+2022-09-05 00:07:47.876 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Context refreshed
+2022-09-05 00:07:47.899 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-09-05 00:07:47.939 - INFO  [  restartedMain] w.s.ApiListingReferenceScanner : Scanning for api listing references
+2022-09-05 00:07:48.170 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-05 00:07:48.200 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-05 00:07:48.326 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started DemoApplication in 11.993 seconds (JVM running for 15.192)
+2022-09-05 00:07:51.844 - INFO  [nio-8888-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-05 00:07:51.844 - INFO  [nio-8888-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2022-09-05 00:07:51.847 - INFO  [nio-8888-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 3 ms
+2022-09-05 00:07:51.916 - INFO  [nio-8888-exec-1] f.JwtAuthenticationTokenFilter : token格式合法开始获取redis中的用户信息
+2022-09-05 00:07:54.711 - INFO  [nio-8888-exec-1] f.JwtAuthenticationTokenFilter : Redis中命中到对应用户
+2022-09-05 00:07:54.713 - INFO  [nio-8888-exec-1] f.JwtAuthenticationTokenFilter : 放行信息放入过滤链成功
+2022-09-05 00:08:14.680 - INFO  [xecutorLoop-1-2] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:08:14.827 - INFO  [ioEventLoop-4-2] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:08:28.552 - INFO  [ionShutdownHook] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown initiated...
+2022-09-05 00:08:28.565 - INFO  [ionShutdownHook] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown completed.
+2022-09-05 00:08:35.090 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting DemoApplication using Java 1.8.0_311 on DESKTOP-EI2Q46S with PID 22988 (E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back\gyy_code\target\classes started by 11641 in E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back)
+2022-09-05 00:08:35.104 - INFO  [  restartedMain] o.s.b.SpringApplication        : The following profiles are active: dev
+2022-09-05 00:08:35.162 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-05 00:08:35.162 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-05 00:08:36.404 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-05 00:08:36.406 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-05 00:08:36.441 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 0 Elasticsearch repository interfaces.
+2022-09-05 00:08:36.445 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-05 00:08:36.446 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-05 00:08:36.460 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-05 00:08:36.476 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-05 00:08:36.478 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-05 00:08:36.496 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2022-09-05 00:08:37.733 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8888 (http)
+2022-09-05 00:08:37.746 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8888"]
+2022-09-05 00:08:37.747 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2022-09-05 00:08:37.748 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-09-05 00:08:37.925 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2022-09-05 00:08:37.925 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2762 ms
+2022-09-05 00:08:38.631 - WARN  [  restartedMain] c.b.m.c.m.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dms.guyiyao.pojo.PersistentLogins.
+2022-09-05 00:08:40.703 - INFO  [  restartedMain] redAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.util.List com.dms.guyiyao.controller.TsBookChapterController.getCatLog()
+2022-09-05 00:08:40.759 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Starting...
+2022-09-05 00:08:40.762 - WARN  [  restartedMain] c.z.h.u.DriverDataSource       : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-09-05 00:08:42.514 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Start completed.
+2022-09-05 00:08:43.934 - INFO  [  restartedMain] edRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-09-05 00:08:44.064 - INFO  [  restartedMain] s.w.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e6f8e1c, org.springframework.security.web.context.SecurityContextPersistenceFilter@7643572b, org.springframework.security.web.header.HeaderWriterFilter@6b86429b, org.springframework.security.web.authentication.logout.LogoutFilter@48fb2d82, com.dms.guyiyao.security.filter.JwtAuthenticationTokenFilter@2b7d90b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f1ac982, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@499d8912, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@668036c0, org.springframework.security.web.session.SessionManagementFilter@5aa8f176, org.springframework.security.web.access.ExceptionTranslationFilter@37b55bd5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6e91992b]
+2022-09-05 00:08:44.241 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2022-09-05 00:08:44.274 - INFO  [  restartedMain] .w.s.WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2022-09-05 00:08:44.757 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8888"]
+2022-09-05 00:08:44.767 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8888 (http) with context path ''
+2022-09-05 00:08:44.769 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Context refreshed
+2022-09-05 00:08:44.789 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-09-05 00:08:44.829 - INFO  [  restartedMain] w.s.ApiListingReferenceScanner : Scanning for api listing references
+2022-09-05 00:08:44.990 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-05 00:08:45.013 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-05 00:08:45.124 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started DemoApplication in 10.605 seconds (JVM running for 14.717)
+2022-09-05 00:09:09.790 - INFO  [nio-8888-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-05 00:09:09.790 - INFO  [nio-8888-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2022-09-05 00:09:09.792 - INFO  [nio-8888-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 2 ms
+2022-09-05 00:09:09.890 - INFO  [nio-8888-exec-1] f.JwtAuthenticationTokenFilter : token格式合法开始获取redis中的用户信息
+2022-09-05 00:09:12.791 - INFO  [nio-8888-exec-1] f.JwtAuthenticationTokenFilter : Redis中命中到对应用户
+2022-09-05 00:09:12.792 - INFO  [nio-8888-exec-1] f.JwtAuthenticationTokenFilter : 放行信息放入过滤链成功
+2022-09-05 00:12:06.957 - WARN  [l-1 housekeeper] c.z.h.p.HikariPool$HouseKeeper : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m18s242ms661µs800ns).
+2022-09-05 00:12:07.024 - INFO  [xecutorLoop-1-2] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:12:07.175 - INFO  [ioEventLoop-4-2] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:12:08.989 - INFO  [ionShutdownHook] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown initiated...
+2022-09-05 00:12:09.008 - INFO  [ionShutdownHook] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown completed.
+2022-09-05 00:12:18.802 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting DemoApplication using Java 1.8.0_311 on DESKTOP-EI2Q46S with PID 4408 (E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back\gyy_code\target\classes started by 11641 in E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back)
+2022-09-05 00:12:18.815 - INFO  [  restartedMain] o.s.b.SpringApplication        : The following profiles are active: dev
+2022-09-05 00:12:18.873 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-05 00:12:18.873 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-05 00:12:20.233 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-05 00:12:20.236 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-05 00:12:20.284 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 0 Elasticsearch repository interfaces.
+2022-09-05 00:12:20.290 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-05 00:12:20.291 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-05 00:12:20.303 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-05 00:12:20.322 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-05 00:12:20.323 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-05 00:12:20.346 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2022-09-05 00:12:21.291 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8888 (http)
+2022-09-05 00:12:21.299 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8888"]
+2022-09-05 00:12:21.300 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2022-09-05 00:12:21.301 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-09-05 00:12:21.442 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2022-09-05 00:12:21.442 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2568 ms
+2022-09-05 00:12:22.165 - WARN  [  restartedMain] c.b.m.c.m.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dms.guyiyao.pojo.PersistentLogins.
+2022-09-05 00:12:24.328 - INFO  [  restartedMain] redAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.util.List com.dms.guyiyao.controller.TsBookChapterController.getCatLog()
+2022-09-05 00:12:24.389 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Starting...
+2022-09-05 00:12:24.390 - WARN  [  restartedMain] c.z.h.u.DriverDataSource       : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-09-05 00:12:26.219 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Start completed.
+2022-09-05 00:12:27.805 - INFO  [  restartedMain] edRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-09-05 00:12:27.956 - INFO  [  restartedMain] s.w.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3489e824, org.springframework.security.web.context.SecurityContextPersistenceFilter@42b5cd69, org.springframework.security.web.header.HeaderWriterFilter@744f33f9, org.springframework.security.web.authentication.logout.LogoutFilter@65ac0b9, com.dms.guyiyao.security.filter.JwtAuthenticationTokenFilter@566bf8ce, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a50b4ea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c4f3f85, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2f8f3594, org.springframework.security.web.session.SessionManagementFilter@45057381, org.springframework.security.web.access.ExceptionTranslationFilter@32e08771, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c935ac4]
+2022-09-05 00:12:28.120 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2022-09-05 00:12:28.155 - INFO  [  restartedMain] .w.s.WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2022-09-05 00:12:28.716 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8888"]
+2022-09-05 00:12:28.728 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8888 (http) with context path ''
+2022-09-05 00:12:28.729 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Context refreshed
+2022-09-05 00:12:28.753 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-09-05 00:12:28.820 - INFO  [  restartedMain] w.s.ApiListingReferenceScanner : Scanning for api listing references
+2022-09-05 00:12:29.025 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-05 00:12:29.054 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-05 00:12:29.208 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started DemoApplication in 11.033 seconds (JVM running for 14.305)
+2022-09-05 00:12:29.897 - INFO  [nio-8888-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-05 00:12:29.897 - INFO  [nio-8888-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2022-09-05 00:12:29.899 - INFO  [nio-8888-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 2 ms
+2022-09-05 00:12:29.987 - INFO  [nio-8888-exec-1] f.JwtAuthenticationTokenFilter : token格式合法开始获取redis中的用户信息
+2022-09-05 00:12:33.384 - INFO  [nio-8888-exec-1] f.JwtAuthenticationTokenFilter : Redis中命中到对应用户
+2022-09-05 00:12:33.386 - INFO  [nio-8888-exec-1] f.JwtAuthenticationTokenFilter : 放行信息放入过滤链成功
+2022-09-05 00:12:50.264 - INFO  [ionShutdownHook] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown initiated...
+2022-09-05 00:12:50.278 - INFO  [ionShutdownHook] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown completed.
+2022-09-05 00:13:00.813 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting DemoApplication using Java 1.8.0_311 on DESKTOP-EI2Q46S with PID 24220 (E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back\gyy_code\target\classes started by 11641 in E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back)
+2022-09-05 00:13:00.826 - INFO  [  restartedMain] o.s.b.SpringApplication        : The following profiles are active: dev
+2022-09-05 00:13:00.891 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-05 00:13:00.892 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-05 00:13:02.440 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-05 00:13:02.443 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-05 00:13:02.494 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 0 Elasticsearch repository interfaces.
+2022-09-05 00:13:02.501 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-05 00:13:02.502 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-05 00:13:02.516 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-05 00:13:02.540 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-05 00:13:02.542 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-05 00:13:02.564 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-09-05 00:13:03.802 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8888 (http)
+2022-09-05 00:13:03.820 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8888"]
+2022-09-05 00:13:03.823 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2022-09-05 00:13:03.824 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-09-05 00:13:04.117 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2022-09-05 00:13:04.118 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3224 ms
+2022-09-05 00:13:05.987 - WARN  [  restartedMain] c.b.m.c.m.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dms.guyiyao.pojo.PersistentLogins.
+2022-09-05 00:13:08.915 - INFO  [  restartedMain] redAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.util.List com.dms.guyiyao.controller.TsBookChapterController.getCatLog()
+2022-09-05 00:13:08.980 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Starting...
+2022-09-05 00:13:08.985 - WARN  [  restartedMain] c.z.h.u.DriverDataSource       : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-09-05 00:13:10.800 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Start completed.
+2022-09-05 00:13:12.477 - INFO  [  restartedMain] edRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-09-05 00:13:12.584 - INFO  [  restartedMain] s.w.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30d1acb7, org.springframework.security.web.context.SecurityContextPersistenceFilter@7a51b1bc, org.springframework.security.web.header.HeaderWriterFilter@4e98a3ac, org.springframework.security.web.authentication.logout.LogoutFilter@2fbfec87, com.dms.guyiyao.security.filter.JwtAuthenticationTokenFilter@e8911e8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c4da3ef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@9c47d8d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f40989d, org.springframework.security.web.session.SessionManagementFilter@13b895cd, org.springframework.security.web.access.ExceptionTranslationFilter@3ffd64be, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@9efed6e]
+2022-09-05 00:13:12.755 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2022-09-05 00:13:12.799 - INFO  [  restartedMain] .w.s.WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2022-09-05 00:13:13.454 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8888"]
+2022-09-05 00:13:13.469 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8888 (http) with context path ''
+2022-09-05 00:13:13.470 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Context refreshed
+2022-09-05 00:13:13.493 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-09-05 00:13:13.533 - INFO  [  restartedMain] w.s.ApiListingReferenceScanner : Scanning for api listing references
+2022-09-05 00:13:13.705 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-05 00:13:13.730 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-05 00:13:13.871 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started DemoApplication in 13.7 seconds (JVM running for 17.361)
+2022-09-05 00:13:42.426 - INFO  [nio-8888-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-05 00:13:42.426 - INFO  [nio-8888-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2022-09-05 00:13:42.427 - INFO  [nio-8888-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 1 ms
+2022-09-05 00:13:42.484 - INFO  [nio-8888-exec-1] f.JwtAuthenticationTokenFilter : token格式合法开始获取redis中的用户信息
+2022-09-05 00:13:44.429 - INFO  [nio-8888-exec-1] f.JwtAuthenticationTokenFilter : Redis中命中到对应用户
+2022-09-05 00:13:44.430 - INFO  [nio-8888-exec-1] f.JwtAuthenticationTokenFilter : 放行信息放入过滤链成功
+2022-09-05 00:14:04.427 - INFO  [xecutorLoop-1-2] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:14:04.575 - INFO  [ioEventLoop-4-2] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:14:24.614 - INFO  [xecutorLoop-1-3] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:14:24.768 - INFO  [ioEventLoop-4-3] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:14:44.816 - INFO  [xecutorLoop-1-4] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:14:44.972 - INFO  [ioEventLoop-4-4] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:15:05.014 - INFO  [xecutorLoop-1-5] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:15:05.150 - INFO  [ioEventLoop-4-5] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:15:25.215 - INFO  [xecutorLoop-1-6] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:15:25.362 - INFO  [ioEventLoop-4-6] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:15:45.419 - INFO  [xecutorLoop-1-7] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:15:45.563 - INFO  [ioEventLoop-4-7] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:16:05.623 - INFO  [xecutorLoop-1-8] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:16:05.759 - INFO  [ioEventLoop-4-8] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:16:25.818 - INFO  [xecutorLoop-1-1] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:16:25.955 - INFO  [ioEventLoop-4-1] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:16:46.016 - INFO  [xecutorLoop-1-2] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:16:46.159 - INFO  [ioEventLoop-4-2] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:17:06.216 - INFO  [xecutorLoop-1-3] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:17:06.355 - INFO  [ioEventLoop-4-3] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:17:26.421 - INFO  [xecutorLoop-1-4] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:17:26.567 - INFO  [ioEventLoop-4-4] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:17:46.617 - INFO  [xecutorLoop-1-5] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:17:46.760 - INFO  [ioEventLoop-4-5] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:18:06.816 - INFO  [xecutorLoop-1-6] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:18:06.964 - INFO  [ioEventLoop-4-6] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:18:09.995 - INFO  [nio-8888-exec-3] f.JwtAuthenticationTokenFilter : token格式合法开始获取redis中的用户信息
+2022-09-05 00:18:10.044 - INFO  [nio-8888-exec-3] f.JwtAuthenticationTokenFilter : Redis中命中到对应用户
+2022-09-05 00:18:10.045 - INFO  [nio-8888-exec-3] f.JwtAuthenticationTokenFilter : 放行信息放入过滤链成功
+2022-09-05 00:18:27.015 - INFO  [xecutorLoop-1-8] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:18:27.154 - INFO  [ioEventLoop-4-7] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:18:47.219 - INFO  [xecutorLoop-1-1] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:18:47.363 - INFO  [ioEventLoop-4-8] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:19:07.415 - INFO  [xecutorLoop-1-2] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:19:07.557 - INFO  [ioEventLoop-4-1] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:19:27.624 - INFO  [xecutorLoop-1-3] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:19:27.763 - INFO  [ioEventLoop-4-2] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:19:47.823 - INFO  [xecutorLoop-1-4] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:19:47.964 - INFO  [ioEventLoop-4-3] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:20:08.014 - INFO  [xecutorLoop-1-5] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:20:08.162 - INFO  [ioEventLoop-4-4] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:20:28.222 - INFO  [xecutorLoop-1-6] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:20:28.378 - INFO  [ioEventLoop-4-5] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:20:48.418 - INFO  [xecutorLoop-1-7] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:20:48.584 - INFO  [ioEventLoop-4-6] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:21:08.626 - INFO  [xecutorLoop-1-8] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:21:08.781 - INFO  [ioEventLoop-4-7] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:21:28.819 - INFO  [xecutorLoop-1-1] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:21:28.953 - INFO  [ioEventLoop-4-8] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:21:49.019 - INFO  [xecutorLoop-1-2] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:21:49.159 - INFO  [ioEventLoop-4-1] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:22:09.225 - INFO  [xecutorLoop-1-3] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:22:09.376 - INFO  [ioEventLoop-4-2] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:22:29.416 - INFO  [xecutorLoop-1-4] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:22:29.561 - INFO  [ioEventLoop-4-3] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:22:49.618 - INFO  [xecutorLoop-1-5] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:22:49.756 - INFO  [ioEventLoop-4-4] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:23:09.818 - INFO  [xecutorLoop-1-6] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:23:09.959 - INFO  [ioEventLoop-4-5] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:23:30.018 - INFO  [xecutorLoop-1-7] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:23:30.169 - INFO  [ioEventLoop-4-6] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:23:50.216 - INFO  [xecutorLoop-1-8] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:23:50.357 - INFO  [ioEventLoop-4-7] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:24:10.419 - INFO  [xecutorLoop-1-1] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:24:10.552 - INFO  [ioEventLoop-4-8] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:24:19.204 - INFO  [ionShutdownHook] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown initiated...
+2022-09-05 00:24:19.217 - INFO  [ionShutdownHook] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown completed.
+2022-09-05 00:30:06.899 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting DemoApplication using Java 1.8.0_311 on DESKTOP-EI2Q46S with PID 22716 (E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back\gyy_code\target\classes started by 11641 in E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back)
+2022-09-05 00:30:06.908 - INFO  [  restartedMain] o.s.b.SpringApplication        : The following profiles are active: dev
+2022-09-05 00:30:06.950 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-05 00:30:06.950 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-05 00:30:07.979 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-05 00:30:07.982 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-05 00:30:08.009 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 0 Elasticsearch repository interfaces.
+2022-09-05 00:30:08.015 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-05 00:30:08.016 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-05 00:30:08.024 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-05 00:30:08.037 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-05 00:30:08.038 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-05 00:30:08.059 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2022-09-05 00:30:09.021 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8888 (http)
+2022-09-05 00:30:09.029 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8888"]
+2022-09-05 00:30:09.030 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2022-09-05 00:30:09.030 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-09-05 00:30:09.171 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2022-09-05 00:30:09.171 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2220 ms
+2022-09-05 00:30:09.746 - WARN  [  restartedMain] c.b.m.c.m.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dms.guyiyao.pojo.PersistentLogins.
+2022-09-05 00:30:11.807 - INFO  [  restartedMain] redAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.util.List com.dms.guyiyao.controller.TsBookChapterController.getCatLog()
+2022-09-05 00:30:11.860 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Starting...
+2022-09-05 00:30:11.862 - WARN  [  restartedMain] c.z.h.u.DriverDataSource       : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-09-05 00:30:13.677 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Start completed.
+2022-09-05 00:30:15.393 - INFO  [  restartedMain] edRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-09-05 00:30:15.536 - INFO  [  restartedMain] s.w.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@47169522, org.springframework.security.web.context.SecurityContextPersistenceFilter@2bd3ebfe, org.springframework.security.web.header.HeaderWriterFilter@31a12687, org.springframework.security.web.authentication.logout.LogoutFilter@12a8f875, com.dms.guyiyao.security.filter.JwtAuthenticationTokenFilter@414470f6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@23ef5014, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@127ae3e9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1dd1114b, org.springframework.security.web.session.SessionManagementFilter@c3e55b4, org.springframework.security.web.access.ExceptionTranslationFilter@44549920, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@224c9e7d]
+2022-09-05 00:30:15.686 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2022-09-05 00:30:15.713 - INFO  [  restartedMain] .w.s.WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2022-09-05 00:30:16.173 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8888"]
+2022-09-05 00:30:16.184 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8888 (http) with context path ''
+2022-09-05 00:30:16.186 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Context refreshed
+2022-09-05 00:30:16.205 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-09-05 00:30:16.245 - INFO  [  restartedMain] w.s.ApiListingReferenceScanner : Scanning for api listing references
+2022-09-05 00:30:16.414 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-05 00:30:16.445 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-05 00:30:16.584 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started DemoApplication in 10.155 seconds (JVM running for 12.958)
+2022-09-05 00:30:31.994 - INFO  [nio-8888-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-05 00:30:31.994 - INFO  [nio-8888-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2022-09-05 00:30:31.996 - INFO  [nio-8888-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 1 ms
+2022-09-05 00:30:34.535 - INFO  [nio-8888-exec-1] c.d.g.s.I.LoginServiceImpl     : 
+Ip:【127.0.0.1】用户名:【dddddd】,密码：【mima12345】登录成功
+2022-09-05 00:30:54.518 - INFO  [xecutorLoop-1-2] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:30:54.667 - INFO  [ioEventLoop-4-2] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:31:14.717 - INFO  [xecutorLoop-1-3] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:31:14.872 - INFO  [ioEventLoop-4-3] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:31:20.388 - INFO  [nio-8888-exec-2] f.JwtAuthenticationTokenFilter : token格式合法开始获取redis中的用户信息
+2022-09-05 00:31:20.450 - INFO  [nio-8888-exec-2] f.JwtAuthenticationTokenFilter : Redis中命中到对应用户
+2022-09-05 00:31:20.451 - INFO  [nio-8888-exec-2] f.JwtAuthenticationTokenFilter : 放行信息放入过滤链成功
+2022-09-05 00:31:20.725 - INFO  [nio-8888-exec-2] c.d.g.s.I.TsUserServiceImpl    : mima12345加密成功
+2022-09-05 00:31:20.823 - INFO  [nio-8888-exec-2] c.d.g.s.I.TsUserServiceImpl    : 加密密码$2a$10$BA6aPYL0niFUJd1J.shExeu/DDv7DgRmOtlteswiMWrgCABfHtbWe修改成功
+2022-09-05 00:31:34.916 - INFO  [xecutorLoop-1-5] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:31:35.051 - INFO  [ioEventLoop-4-4] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:31:36.508 - INFO  [nio-8888-exec-3] f.JwtAuthenticationTokenFilter : token格式合法开始获取redis中的用户信息
+2022-09-05 00:31:36.553 - INFO  [nio-8888-exec-3] f.JwtAuthenticationTokenFilter : Redis中命中到对应用户
+2022-09-05 00:31:36.553 - INFO  [nio-8888-exec-3] f.JwtAuthenticationTokenFilter : 放行信息放入过滤链成功
+2022-09-05 00:31:36.727 - INFO  [nio-8888-exec-3] c.d.g.s.I.TsUserServiceImpl    : mima12345加密成功
+2022-09-05 00:31:36.823 - INFO  [nio-8888-exec-3] c.d.g.s.I.TsUserServiceImpl    : 加密密码$2a$10$cq6L8zXITux4.dwMrWykteuRs5lh0oQ3vci.hhK2Z.l1kjyn1XQui修改成功
+2022-09-05 00:31:55.115 - INFO  [xecutorLoop-1-7] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:31:55.265 - INFO  [ioEventLoop-4-5] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:32:11.743 - INFO  [nio-8888-exec-4] c.d.g.s.I.LoginServiceImpl     : 
+Ip:【127.0.0.1】用户名:【robin】,密码：【mima12345】登录成功
+2022-09-05 00:32:15.325 - INFO  [xecutorLoop-1-1] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:32:15.456 - INFO  [ioEventLoop-4-6] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:32:34.068 - INFO  [nio-8888-exec-5] f.JwtAuthenticationTokenFilter : token格式合法开始获取redis中的用户信息
+2022-09-05 00:32:34.113 - INFO  [nio-8888-exec-5] f.JwtAuthenticationTokenFilter : Redis中命中到对应用户
+2022-09-05 00:32:34.113 - INFO  [nio-8888-exec-5] f.JwtAuthenticationTokenFilter : 放行信息放入过滤链成功
+2022-09-05 00:32:34.297 - INFO  [nio-8888-exec-5] c.d.g.s.I.TsUserServiceImpl    : mima12345加密成功
+2022-09-05 00:32:34.391 - INFO  [nio-8888-exec-5] c.d.g.s.I.TsUserServiceImpl    : 加密密码$2a$10$NteNY54mK98AFkfEuEBX0OxJj3.gpViJ/wyoeCwRMsTGa5Jw0jTgy修改成功
+2022-09-05 00:32:35.516 - INFO  [xecutorLoop-1-3] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:32:35.662 - INFO  [ioEventLoop-4-7] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:32:55.725 - INFO  [xecutorLoop-1-4] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:32:55.881 - INFO  [ioEventLoop-4-8] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:33:00.091 - INFO  [nio-8888-exec-6] c.d.g.s.I.LoginServiceImpl     : 
+Ip:【127.0.0.1】用户名:【dddddd】,密码：【mima12345】登录成功
+2022-09-05 00:33:03.631 - INFO  [nio-8888-exec-7] c.d.g.s.I.LoginServiceImpl     : 
+Ip:【127.0.0.1】用户名:【dddddd】,密码：【mima12345】登录成功
+2022-09-05 00:33:15.916 - INFO  [xecutorLoop-1-7] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:33:16.066 - INFO  [ioEventLoop-4-1] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-05 00:33:18.248 - INFO  [nio-8888-exec-8] f.JwtAuthenticationTokenFilter : token格式合法开始获取redis中的用户信息
+2022-09-05 00:33:18.299 - INFO  [nio-8888-exec-8] f.JwtAuthenticationTokenFilter : Redis中命中到对应用户
+2022-09-05 00:33:18.299 - INFO  [nio-8888-exec-8] f.JwtAuthenticationTokenFilter : 放行信息放入过滤链成功
+2022-09-05 00:33:18.473 - INFO  [nio-8888-exec-8] c.d.g.s.I.TsUserServiceImpl    : mima12345加密成功
+2022-09-05 00:33:18.570 - INFO  [nio-8888-exec-8] c.d.g.s.I.TsUserServiceImpl    : 加密密码$2a$10$3OsvkZNBfg94oaIetvnx2OorOL7/rlxnAh1vUB4qXNofNoJLyzAKC修改成功
+2022-09-05 00:33:36.115 - INFO  [xecutorLoop-1-1] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-05 00:33:36.254 - INFO  [ioEventLoop-4-2] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+>>>>>>> 63927cd816a2e34418650f1bbc7e437a96c05518
+2022-09-07 21:36:50.488 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting DemoApplication using Java 1.8.0_311 on DESKTOP-EI2Q46S with PID 30564 (E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back\gyy_code\target\classes started by 11641 in E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back)
+2022-09-07 21:36:50.527 - INFO  [  restartedMain] o.s.b.SpringApplication        : The following profiles are active: dev
+2022-09-07 21:36:50.617 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-07 21:36:50.618 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-07 21:36:53.526 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 21:36:53.528 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-07 21:36:53.644 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 0 Elasticsearch repository interfaces.
+2022-09-07 21:36:53.650 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 21:36:53.651 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-07 21:36:53.667 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-07 21:36:53.697 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 21:36:53.698 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-07 21:36:53.717 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2022-09-07 21:36:55.089 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8888 (http)
+2022-09-07 21:36:55.098 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8888"]
+2022-09-07 21:36:55.099 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2022-09-07 21:36:55.099 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-09-07 21:36:55.291 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2022-09-07 21:36:55.292 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4674 ms
+2022-09-07 21:36:56.610 - WARN  [  restartedMain] c.b.m.c.m.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dms.guyiyao.pojo.PersistentLogins.
+2022-09-07 21:36:58.810 - INFO  [  restartedMain] redAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.util.List com.dms.guyiyao.controller.TsBookChapterController.getCatLog()
+2022-09-07 21:36:58.872 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Starting...
+2022-09-07 21:36:58.887 - WARN  [  restartedMain] c.z.h.u.DriverDataSource       : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-09-07 21:37:00.643 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-1 - Start completed.
+2022-09-07 21:37:02.291 - INFO  [  restartedMain] edRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-09-07 21:37:02.413 - INFO  [  restartedMain] s.w.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@10ee0537, org.springframework.security.web.context.SecurityContextPersistenceFilter@5fb80b33, org.springframework.security.web.header.HeaderWriterFilter@1ab72cf4, org.springframework.security.web.authentication.logout.LogoutFilter@3d869335, com.dms.guyiyao.security.filter.JwtAuthenticationTokenFilter@1922c2fb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@35b08b98, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@76e85591, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7709c898, org.springframework.security.web.session.SessionManagementFilter@13a00868, org.springframework.security.web.access.ExceptionTranslationFilter@3a63212d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4e1e011d]
+2022-09-07 21:37:02.635 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2022-09-07 21:37:02.662 - INFO  [  restartedMain] .w.s.WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2022-09-07 21:37:03.326 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8888"]
+2022-09-07 21:37:03.347 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8888 (http) with context path ''
+2022-09-07 21:37:03.348 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Context refreshed
+2022-09-07 21:37:03.384 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-09-07 21:37:03.458 - INFO  [  restartedMain] w.s.ApiListingReferenceScanner : Scanning for api listing references
+2022-09-07 21:37:03.462 - INFO  [nio-8888-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-07 21:37:03.462 - INFO  [nio-8888-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2022-09-07 21:37:03.464 - INFO  [nio-8888-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 2 ms
+2022-09-07 21:37:03.638 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-07 21:37:03.658 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-07 21:37:03.810 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started DemoApplication in 13.955 seconds (JVM running for 18.481)
+2022-09-07 21:37:07.147 - INFO  [nio-8888-exec-1] c.d.g.s.I.LoginServiceImpl     : 
+Ip:【127.0.0.1】用户名:【robin】,密码：【mima12345】登录成功
+2022-09-07 21:37:27.170 - INFO  [xecutorLoop-1-2] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:37:27.340 - INFO  [ioEventLoop-4-2] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:37:47.368 - INFO  [xecutorLoop-1-3] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:37:47.505 - INFO  [ioEventLoop-4-3] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:38:07.567 - INFO  [xecutorLoop-1-4] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:38:07.724 - INFO  [ioEventLoop-4-4] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:38:27.767 - INFO  [xecutorLoop-1-5] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:38:27.936 - INFO  [ioEventLoop-4-5] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:38:47.966 - INFO  [xecutorLoop-1-6] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:38:48.108 - INFO  [ioEventLoop-4-6] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:39:08.167 - INFO  [xecutorLoop-1-7] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:39:08.308 - INFO  [ioEventLoop-4-7] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:39:12.521 - INFO  [nio-8888-exec-3] f.JwtAuthenticationTokenFilter : token格式合法开始获取redis中的用户信息
+2022-09-07 21:39:12.589 - INFO  [nio-8888-exec-3] f.JwtAuthenticationTokenFilter : Redis中命中到对应用户
+2022-09-07 21:39:12.590 - INFO  [nio-8888-exec-3] f.JwtAuthenticationTokenFilter : 放行信息放入过滤链成功
+2022-09-07 21:39:28.365 - INFO  [xecutorLoop-1-1] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:39:28.512 - INFO  [ioEventLoop-4-8] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:39:48.575 - INFO  [xecutorLoop-1-2] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:39:48.727 - INFO  [ioEventLoop-4-1] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:40:08.770 - INFO  [xecutorLoop-1-3] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:40:08.923 - INFO  [ioEventLoop-4-2] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:40:28.973 - INFO  [xecutorLoop-1-4] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:40:29.113 - INFO  [ioEventLoop-4-3] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:40:49.173 - INFO  [xecutorLoop-1-5] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:40:49.316 - INFO  [ioEventLoop-4-4] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:41:09.366 - INFO  [xecutorLoop-1-6] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:41:09.520 - INFO  [ioEventLoop-4-5] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:41:29.575 - INFO  [xecutorLoop-1-7] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:41:29.738 - INFO  [ioEventLoop-4-6] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:41:49.772 - INFO  [xecutorLoop-1-8] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:41:49.928 - INFO  [ioEventLoop-4-7] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:42:09.971 - INFO  [xecutorLoop-1-1] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:42:10.123 - INFO  [ioEventLoop-4-8] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:42:30.175 - INFO  [xecutorLoop-1-2] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:42:30.328 - INFO  [ioEventLoop-4-1] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:42:50.366 - INFO  [xecutorLoop-1-3] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:42:50.524 - INFO  [ioEventLoop-4-2] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:43:10.565 - INFO  [xecutorLoop-1-4] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:43:10.712 - INFO  [ioEventLoop-4-3] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:43:30.766 - INFO  [xecutorLoop-1-5] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:43:30.917 - INFO  [ioEventLoop-4-4] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:43:50.974 - INFO  [xecutorLoop-1-6] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:43:51.125 - INFO  [ioEventLoop-4-5] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:44:11.166 - INFO  [xecutorLoop-1-7] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:44:11.317 - INFO  [ioEventLoop-4-6] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:44:31.371 - INFO  [xecutorLoop-1-8] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:44:31.517 - INFO  [ioEventLoop-4-7] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:44:51.569 - INFO  [xecutorLoop-1-1] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:44:51.707 - INFO  [ioEventLoop-4-8] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:45:11.766 - INFO  [xecutorLoop-1-2] n.u.i.l.AbstractInternalLogger : Reconnecting, last destination was /114.55.85.25:60000
+2022-09-07 21:45:11.912 - INFO  [ioEventLoop-4-1] i.l.c.p.ReconnectionHandler    : Reconnected to 114.55.85.25:60000
+2022-09-07 21:45:24.309 - INFO  [      Thread-28] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown initiated...
+2022-09-07 21:45:24.329 - INFO  [      Thread-28] c.z.h.HikariDataSource         : HikariPool-1 - Shutdown completed.
+2022-09-07 21:45:24.837 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting DemoApplication using Java 1.8.0_311 on DESKTOP-EI2Q46S with PID 30564 (E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back\gyy_code\target\classes started by 11641 in E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back)
+2022-09-07 21:45:24.842 - INFO  [  restartedMain] o.s.b.SpringApplication        : The following profiles are active: pron
+2022-09-07 21:45:25.719 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 21:45:25.723 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-07 21:45:25.817 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 0 Elasticsearch repository interfaces.
+2022-09-07 21:45:25.824 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 21:45:25.826 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-07 21:45:25.846 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-07 21:45:25.863 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 21:45:25.864 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-07 21:45:25.888 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2022-09-07 21:45:26.819 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8888 (http)
+2022-09-07 21:45:26.820 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8888"]
+2022-09-07 21:45:26.821 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2022-09-07 21:45:26.822 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-09-07 21:45:26.905 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2022-09-07 21:45:26.906 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2060 ms
+2022-09-07 21:45:27.103 - WARN  [  restartedMain] c.b.m.c.m.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dms.guyiyao.pojo.PersistentLogins.
+2022-09-07 21:45:28.938 - INFO  [  restartedMain] redAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.util.List com.dms.guyiyao.controller.TsBookChapterController.getCatLog()
+2022-09-07 21:45:28.953 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-2 - Starting...
+2022-09-07 21:45:29.736 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-2 - Start completed.
+2022-09-07 21:45:30.485 - INFO  [  restartedMain] edRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-09-07 21:45:30.535 - INFO  [  restartedMain] s.w.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@66d7915, org.springframework.security.web.context.SecurityContextPersistenceFilter@4f08e057, org.springframework.security.web.header.HeaderWriterFilter@1697081b, org.springframework.security.web.authentication.logout.LogoutFilter@782eadf9, com.dms.guyiyao.security.filter.JwtAuthenticationTokenFilter@2c24e42e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47b6b5b4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@69cfaa89, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@71c518e, org.springframework.security.web.session.SessionManagementFilter@77ddc4ef, org.springframework.security.web.access.ExceptionTranslationFilter@1613af8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6b9190bf]
+2022-09-07 21:45:30.598 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2022-09-07 21:45:30.605 - INFO  [  restartedMain] .w.s.WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2022-09-07 21:45:30.778 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8888"]
+2022-09-07 21:45:30.779 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8888 (http) with context path ''
+2022-09-07 21:45:30.780 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Context refreshed
+2022-09-07 21:45:30.780 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-09-07 21:45:30.784 - INFO  [  restartedMain] w.s.ApiListingReferenceScanner : Scanning for api listing references
+2022-09-07 21:45:30.808 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-07 21:45:30.819 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-07 21:45:30.879 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started DemoApplication in 6.161 seconds (JVM running for 525.55)
+2022-09-07 21:45:30.881 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-09-07 22:23:33.045 - INFO  [      Thread-38] c.z.h.HikariDataSource         : HikariPool-2 - Shutdown initiated...
+2022-09-07 22:24:03.072 - INFO  [      Thread-38] c.z.h.HikariDataSource         : HikariPool-2 - Shutdown completed.
+2022-09-07 22:24:03.539 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting DemoApplication using Java 1.8.0_311 on DESKTOP-EI2Q46S with PID 30564 (E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back\gyy_code\target\classes started by 11641 in E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back)
+2022-09-07 22:24:03.540 - INFO  [  restartedMain] o.s.b.SpringApplication        : The following profiles are active: dev
+2022-09-07 22:24:04.678 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 22:24:04.678 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-07 22:24:04.696 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Elasticsearch repository interfaces.
+2022-09-07 22:24:04.697 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 22:24:04.697 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-07 22:24:04.705 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-07 22:24:04.708 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 22:24:04.708 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-07 22:24:04.715 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2022-09-07 22:24:04.969 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8888 (http)
+2022-09-07 22:24:04.970 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8888"]
+2022-09-07 22:24:04.970 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2022-09-07 22:24:04.970 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-09-07 22:24:05.023 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2022-09-07 22:24:05.024 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1481 ms
+2022-09-07 22:24:05.106 - WARN  [  restartedMain] c.b.m.c.m.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dms.guyiyao.pojo.PersistentLogins.
+2022-09-07 22:24:06.040 - INFO  [  restartedMain] redAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.util.List com.dms.guyiyao.controller.TsBookChapterController.getCatLog()
+2022-09-07 22:24:06.052 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-3 - Starting...
+2022-09-07 22:24:06.053 - WARN  [  restartedMain] c.z.h.u.DriverDataSource       : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-09-07 22:24:06.695 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-3 - Start completed.
+2022-09-07 22:24:07.280 - INFO  [  restartedMain] edRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-09-07 22:24:07.311 - INFO  [  restartedMain] s.w.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@61854045, org.springframework.security.web.context.SecurityContextPersistenceFilter@70893b71, org.springframework.security.web.header.HeaderWriterFilter@5df9d132, org.springframework.security.web.authentication.logout.LogoutFilter@7a14fd9, com.dms.guyiyao.security.filter.JwtAuthenticationTokenFilter@6e62e460, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c15b96, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@17a26a7d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b5f178f, org.springframework.security.web.session.SessionManagementFilter@1707c8cb, org.springframework.security.web.access.ExceptionTranslationFilter@1fad6234, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4436693e]
+2022-09-07 22:24:07.356 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2022-09-07 22:24:07.364 - INFO  [  restartedMain] .w.s.WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2022-09-07 22:24:07.508 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8888"]
+2022-09-07 22:24:07.510 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8888 (http) with context path ''
+2022-09-07 22:24:07.511 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Context refreshed
+2022-09-07 22:24:07.512 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-09-07 22:24:07.516 - INFO  [  restartedMain] w.s.ApiListingReferenceScanner : Scanning for api listing references
+2022-09-07 22:24:07.534 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-07 22:24:07.542 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-07 22:24:07.586 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started DemoApplication in 4.178 seconds (JVM running for 2842.258)
+2022-09-07 22:24:07.588 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-09-07 22:33:36.958 - INFO  [      Thread-42] c.z.h.HikariDataSource         : HikariPool-3 - Shutdown initiated...
+2022-09-07 22:33:36.971 - INFO  [      Thread-42] c.z.h.HikariDataSource         : HikariPool-3 - Shutdown completed.
+2022-09-07 22:33:37.353 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting DemoApplication using Java 1.8.0_311 on DESKTOP-EI2Q46S with PID 30564 (E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back\gyy_code\target\classes started by 11641 in E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back)
+2022-09-07 22:33:37.355 - INFO  [  restartedMain] o.s.b.SpringApplication        : The following profiles are active: dev
+2022-09-07 22:33:37.843 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 22:33:37.844 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-07 22:33:37.864 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 Elasticsearch repository interfaces.
+2022-09-07 22:33:37.865 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 22:33:37.865 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-07 22:33:37.872 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-07 22:33:37.875 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 22:33:37.875 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-07 22:33:37.883 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2022-09-07 22:33:38.163 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8888 (http)
+2022-09-07 22:33:38.164 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8888"]
+2022-09-07 22:33:38.164 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2022-09-07 22:33:38.165 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-09-07 22:33:38.211 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2022-09-07 22:33:38.211 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 853 ms
+2022-09-07 22:33:38.299 - WARN  [  restartedMain] c.b.m.c.m.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dms.guyiyao.pojo.PersistentLogins.
+2022-09-07 22:33:39.441 - INFO  [  restartedMain] redAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.util.List com.dms.guyiyao.controller.TsBookChapterController.getCatLog()
+2022-09-07 22:33:39.455 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-4 - Starting...
+2022-09-07 22:33:39.455 - WARN  [  restartedMain] c.z.h.u.DriverDataSource       : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-09-07 22:33:40.340 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-4 - Start completed.
+2022-09-07 22:33:41.025 - INFO  [  restartedMain] edRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-09-07 22:33:41.063 - INFO  [  restartedMain] s.w.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5ad51b17, org.springframework.security.web.context.SecurityContextPersistenceFilter@1966e1d8, org.springframework.security.web.header.HeaderWriterFilter@57fab10f, org.springframework.security.web.authentication.logout.LogoutFilter@29f9dc72, com.dms.guyiyao.security.filter.JwtAuthenticationTokenFilter@4d86b5bd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f4a552c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d3afb03, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5802693, org.springframework.security.web.session.SessionManagementFilter@730b248c, org.springframework.security.web.access.ExceptionTranslationFilter@3ab19565, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@81419fb]
+2022-09-07 22:33:41.118 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2022-09-07 22:33:41.131 - INFO  [  restartedMain] .w.s.WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2022-09-07 22:33:41.275 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8888"]
+2022-09-07 22:33:41.277 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8888 (http) with context path ''
+2022-09-07 22:33:41.277 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Context refreshed
+2022-09-07 22:33:41.278 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-09-07 22:33:41.282 - INFO  [  restartedMain] w.s.ApiListingReferenceScanner : Scanning for api listing references
+2022-09-07 22:33:41.298 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-07 22:33:41.305 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-07 22:33:41.342 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started DemoApplication in 4.079 seconds (JVM running for 3416.013)
+2022-09-07 22:33:41.343 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-09-07 22:33:43.445 - INFO  [      Thread-46] c.z.h.HikariDataSource         : HikariPool-4 - Shutdown initiated...
+2022-09-07 22:33:46.414 - INFO  [      Thread-46] c.z.h.HikariDataSource         : HikariPool-4 - Shutdown completed.
+2022-09-07 22:33:46.599 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting DemoApplication using Java 1.8.0_311 on DESKTOP-EI2Q46S with PID 30564 (E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back\gyy_code\target\classes started by 11641 in E:\zuomian\源码\bzy_reader\gyy_code\gyy_server_back)
+2022-09-07 22:33:46.600 - INFO  [  restartedMain] o.s.b.SpringApplication        : The following profiles are active: dev
+2022-09-07 22:33:46.882 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 22:33:46.882 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-09-07 22:33:46.896 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 Elasticsearch repository interfaces.
+2022-09-07 22:33:46.897 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 22:33:46.898 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2022-09-07 22:33:46.906 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2022-09-07 22:33:46.910 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-09-07 22:33:46.910 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-07 22:33:46.919 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2022-09-07 22:33:47.032 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8888 (http)
+2022-09-07 22:33:47.033 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8888"]
+2022-09-07 22:33:47.033 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2022-09-07 22:33:47.033 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-09-07 22:33:47.067 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2022-09-07 22:33:47.067 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 465 ms
+2022-09-07 22:33:47.130 - WARN  [  restartedMain] c.b.m.c.m.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dms.guyiyao.pojo.PersistentLogins.
+2022-09-07 22:33:48.020 - INFO  [  restartedMain] redAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.util.List com.dms.guyiyao.controller.TsBookChapterController.getCatLog()
+2022-09-07 22:33:48.032 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-5 - Starting...
+2022-09-07 22:33:48.032 - WARN  [  restartedMain] c.z.h.u.DriverDataSource       : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-09-07 22:33:48.940 - INFO  [  restartedMain] c.z.h.HikariDataSource         : HikariPool-5 - Start completed.
+2022-09-07 22:33:49.647 - INFO  [  restartedMain] edRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-09-07 22:33:49.677 - INFO  [  restartedMain] s.w.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@89ce2b6, org.springframework.security.web.context.SecurityContextPersistenceFilter@111346ff, org.springframework.security.web.header.HeaderWriterFilter@4f97cf09, org.springframework.security.web.authentication.logout.LogoutFilter@69cb76f8, com.dms.guyiyao.security.filter.JwtAuthenticationTokenFilter@2bf67b59, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e35ea1f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f2b8957, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@39bbe3c5, org.springframework.security.web.session.SessionManagementFilter@54b33629, org.springframework.security.web.access.ExceptionTranslationFilter@6015ff95, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7dcd083b]
+2022-09-07 22:33:49.720 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2022-09-07 22:33:49.727 - INFO  [  restartedMain] .w.s.WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2022-09-07 22:33:49.854 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8888"]
+2022-09-07 22:33:49.855 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8888 (http) with context path ''
+2022-09-07 22:33:49.855 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Context refreshed
+2022-09-07 22:33:49.856 - INFO  [  restartedMain] cumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-09-07 22:33:49.858 - INFO  [  restartedMain] w.s.ApiListingReferenceScanner : Scanning for api listing references
+2022-09-07 22:33:49.872 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-07 22:33:49.878 - WARN  [  restartedMain] .w.r.p.ParameterDataTypeReader : Trying to infer dataType java.lang.String[]
+2022-09-07 22:33:49.917 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started DemoApplication in 3.357 seconds (JVM running for 3424.588)
+2022-09-07 22:33:49.918 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged

@@ -315,7 +315,7 @@ export default {
       this.dialogVisible = true
       this.displayCon = scope.sub
       this.clickSequence = e
-      this.$axios.get('/original/getImgUrl/' + this.$store.state.currentChapterId).then(resp => {
+      this.$axios.post('/original/getImgUrl/' + this.$store.state.currentChapterId).then(resp => {
         // resp 为图片数组
         if (resp !== 'error') {
           console.log('rrr', resp);
@@ -384,7 +384,7 @@ export default {
         this.allImg = resp.data ? resp.data : resp
         return this.allImg
       }).then(d => {
-        this.$axios.get('/book/bookContent/'+ id).then(resp=>{
+        this.$axios.post('/book/bookContent?chapterId=' + id).then(resp=>{
           const respData = resp[0] ? resp[0] : 'error'
           this.urlData = []
           // 当响应体中content不为空时

@@ -130,7 +130,8 @@
                 :labelFromData="chooseFromJson"
                 :labelToData="chooseToJson"
             />
-            <el-header style="background-color: #f4cf98; padding-top: 10px">
+            <!-- <el-header style="background-color: #f4cf98; padding-top: 10px"> -->
+            <el-header style="display: none;">
                 <div class="import-parent">
                     <el-button icon="el-icon-refresh" circle title="刷新目录" @click="chapterGet"></el-button>
                     <el-button type="danger" icon="el-icon-delete" title="删除异文：需要预先选中需要删除的异文记录" @click="removeYiwen" circle></el-button>
@@ -194,15 +195,34 @@
                     ></el-tree>
                 </el-aside>
             </el-container>
-            <div class="upload-header">
+            <!-- <div class="upload-header">
                 <el-button
                     type="primary" 
                     class="upload-main"
-                    icon="el-icon-upload2" 
-                    title="上传异文：需要预先选中左右两侧目录树对应章节" 
-                    circle 
+                    title="录入异文：需要预先选中左右两侧目录树对应章节" 
                     @click="link"
-                ></el-button>
+                >录入</el-button>
+            </div> -->
+            <div class="middle-page">
+                <div class="import-parent">
+                    <el-button icon="el-icon-refresh" circle title="刷新目录" @click="chapterGet"></el-button>
+                    <el-button type="danger" icon="el-icon-delete" title="删除异文：需要预先选中需要删除的异文记录" @click="removeYiwen" circle></el-button>
+                    <!-- <el-button type="primary" icon="el-icon-upload2" title="上传异文：需要预先选中左右两侧目录树对应章节" circle @click="link"></el-button> -->
+                    <el-button type="primary" icon="el-icon-edit" title="修改异文：需要预先选中需要修改的异文记录" @click="editYiwen" circle></el-button>
+                    <el-button type="success" icon="el-icon-edit-outline" title="标记异文：需要预先选中需要标记的异文记录" @click="labelYiwen" circle></el-button>
+                    
+                    <el-button
+                        type="primary" 
+                        class="upload-main"
+                        title="录入异文：需要预先选中左右两侧目录树对应章节" 
+                        @click="link"
+                    >录入</el-button>
+                    
+                    <div class="import">
+                        <el-button icon="el-icon-upload" circle @click="importDiff2" title="批量导入异文"></el-button>
+                        <el-button icon="el-icon-upload2" circle @click="importDiff" title="批量导入异文"></el-button>
+                    </div>
+                </div>
             </div>
             <el-table
                 v-loading="tableLoading"
@@ -218,12 +238,12 @@
                 <el-table-column
                     type="selection"
                     align="center"
-                    width="40">
+                    :width="pageWidth * 0.03 > 50 ? 50 : (pageWidth * 0.03 < 40 ? 40 : pageWidth * 0.03)">
                 </el-table-column>
                 <el-table-column
                     label="序号"
                     align="center"
-                    width="50"
+                    :width="pageWidth * 0.04 > 60 ? 60 : (pageWidth * 0.05 < 50 ? 50 : pageWidth * 0.04)"
                     height="60"
                     header-align="center">
                     <template slot-scope="scope">
@@ -235,40 +255,41 @@
                     label="典籍一名称"
                     align="center"
                     header-align="center"
-                    width="120">
+                    :width="pageWidth * 0.09 > 150 ? 150 : (pageWidth * 0.09 < 120 ? 120 : pageWidth * 0.09)">
                 </el-table-column>
                 <el-table-column
                     prop="chapterFrom"
                     label="典籍一章节目"
                     align="center"
                     header-align="center"
-                    width="150">
+                    :width="pageWidth * 0.12 > 185 ? 185 : (pageWidth * 0.12 < 150 ? 150 : pageWidth * 0.12)">
                 </el-table-column>
                 <el-table-column
                     prop="diffFrom"
                     label="典籍一章内容"
                     align="center"
                     header-align="center"
-                    width="315">
+                    :width="pageWidth * 0.237 > 350 ? 350 : (pageWidth * 0.237 < 300 ? 300 : pageWidth * 0.237)">
                 </el-table-column>
                 <el-table-column
                     prop="bookTo"
                     label="典籍二名称"
                     align="center"
                     header-align="center"
-                    width="100">
+                    :width="pageWidth * 0.09 > 150 ? 150 : (pageWidth * 0.09 < 120 ? 120 : pageWidth * 0.09)">
                 </el-table-column>
                 <el-table-column
                     prop="chapterTo"
                     label="典籍二章节目"
                     align="center"
                     header-align="center"
-                    width="150">
+                    :width="pageWidth * 0.12 > 185 ? 185 : (pageWidth * 0.12 < 150 ? 150 : pageWidth * 0.12)">
                 </el-table-column>
                 <el-table-column
                     prop="diffTo"
                     label="典籍二章内容"
                     align="center"
+                    :width="pageWidth * 0.237 > 350 ? 350 : (pageWidth * 0.237 < 300 ? 300 : pageWidth * 0.237)"
                     header-align="center">
                 </el-table-column>
                 <!-- <el-table-column
@@ -290,7 +311,7 @@
     </div>
 </template>
 <script>
-import XLSX from 'xlsx'
+// import XLSX from 'xlsx'
 import Label from './label.vue'
 
 export default {
@@ -324,7 +345,7 @@ export default {
             chooseFromJson: {},
             chooseToJson: {},
             total: 0,
-            size: 10,
+            size: 20,
             currentPage: 1,
             importDialogVisible: false, // 导入异文弹窗
             formLabelWidth: '140px',
@@ -342,6 +363,7 @@ export default {
             import2DialogVisible: false, // 导入异文弹窗2
             uploading2: false, // 是否正在上传2
             pageLoading: false, // 是否正在加载
+            pageWidth: window.screen.width * 0.87, // 页面宽度
         }
     },
     async mounted () {
@@ -471,6 +493,8 @@ export default {
                 formData.append('contentTo', this.textarea2)
                 this.$axios.post('/diff/addDiff', formData).then(res => {
                     if (res === 'success') {
+                        // 清空文本域
+                        this.handleSubmitSuccess()
                         // 刷新列表
                         const formData1 = new FormData()
                         formData1.append('chapterId', this.leftNode.id)
@@ -485,6 +509,10 @@ export default {
             } else {
                 this.$message.error('请确定对应章节关系!')
             }
+        },
+        handleSubmitSuccess () {
+            this.textarea1 = ''
+            this.textarea2 = ''
         },
         handleCurrentChange (val) {
         },
@@ -836,6 +864,7 @@ export default {
 .yiwen1 {
     height: calc(100vh - 340px);
     margin-bottom: 10px;
+    margin-top: -24px;
 }
 
 .main-dis {
@@ -857,9 +886,17 @@ export default {
 
 .import-parent {
   position: relative;
+  margin-bottom: 10px;
+  margin-top: 10px;
   .import {
     position: absolute;
     right: 10px;
+    top: 0px;
+  }
+
+  .upload-main {
+    position: absolute;
+    left: 69%;
     top: 0px;
   }
 }
@@ -869,5 +906,8 @@ export default {
   margin: 0 0 0 20px;
   line-height: 25px;
   vertical-align: bottom;
+}
+
+.middle-page {
 }
 </style>

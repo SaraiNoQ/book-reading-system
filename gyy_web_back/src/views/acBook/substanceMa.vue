@@ -94,8 +94,8 @@
               :data="subData.slice((currentPage-1)*size,currentPage*size)"
               style="width: 100%"
               @row-click="rowGet"
-              :row-style="{height:'50px'}"
-              :cell-style="{padding:'0px'}"
+              :row-style="{ height:'50px' }"
+              :cell-style="{ padding:'10px 0 10px 0' }"
               highlight-current-row
             >
               <el-table-column
@@ -269,6 +269,7 @@ export default {
       },
       chooseBook: '',
       formatDisabled: true, // 格式化按钮禁用
+      spiltRowLabel: '\\f'
     }
   },
   watch: {
@@ -283,11 +284,15 @@ export default {
       // \\r\\n在前端会显示为\r\n，\r\n在前端会展示为换行符
       // \\r\\n是后台用于标识换行符的
       let arr = []
+      /*
       if (strs.indexOf('\\r\\n') !== -1) {
-        arr = strs.replaceAll(/[\r\r\n]/g, '\r\n').replaceAll(/[\\r\\n]/g, '').split('\r\n')
+        // arr = strs.replaceAll(/[\r\r\n]/g, '\r\n').replaceAll(/[\\r\\n]/g, '').split('\r\n')
+        arr = strs.split('\\r\\n')
       } else {
-        arr = strs.split('\r\n')
+        arr = strs.split('\\r\\n')
       }
+      */
+      arr = strs.split('\\r\\n')
       // 清除文本框中最后一行空白
       if (arr[arr.length - 1] === '') {
         arr.pop()
@@ -357,11 +362,12 @@ export default {
             demoData.push(op)
             this.chapterInfo.contentId = resp[0].id
             try {
-              // console.log('before', demoData)
+              console.log('before', demoData)
               this.subData = await this.splitByRow(demoData)
               // console.log('thisSub', this.subData)
               // 将所有\\r\\n替换为空字符串
-              this.chapterInfo.content = resp[0].content.replaceAll(/[\\r\\n]/g, '')
+              // this.chapterInfo.content = resp[0].content.replaceAll(/[\\r\\n]/g, '')
+              this.chapterInfo.content = resp[0].content
               this.mainLoading = false
             } catch (error) {
               console.error(error)
@@ -838,14 +844,14 @@ ul{
 }
 .table-row{
   /*此元素会作为一个表格行显示（类似 <tr>）。*/
-  display:table-row;
+  display: table-row;
 }
 .table-cell{
   /*此元素会作为一个表格单元格显示（类似 <td> 和 <th>）*/
-  display:table-cell;
-  padding:0 5px;
-  border:1px solid #ccc;
-  width:50%
+  display: table-cell;
+  padding: 0 5px;
+  border: 1px solid #ccc;
+  width: 50%
 }
 .table-row-group .table-row:hover,
 .table-footer-group .table-row:hover{

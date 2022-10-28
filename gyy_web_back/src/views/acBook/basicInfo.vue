@@ -47,7 +47,7 @@
         <el-table-column
             label="序号"
             align="center"
-            width="60">
+            :width="pageWidth * 0.045">
           <template slot-scope="scope">
             {{ (scope.$index+1)+(currentPage-1)*size }}
           </template>
@@ -56,30 +56,31 @@
             prop="bookname"
             label="典籍名称"
             align="center"
-            width="270px">
+            :width="pageWidth * 0.21">
         </el-table-column>
         <el-table-column
             prop="author"
             label="作者"
             align="center"
-            width="210px">
+            :width="pageWidth * 0.16">
         </el-table-column>
         <el-table-column
             prop="dynasty"
             label="朝代"
             align="center"
-            width="180px">
+            :width="pageWidth * 0.135">
         </el-table-column>
         <el-table-column
             prop="createtime"
             label="录入时间"
-            align="center">
+            align="center"
+            :width="pageWidth * 0.286">
         </el-table-column>
         <el-table-column
             prop="creater"
             label="录入人员"
             align="center"
-            width="180px">
+            :width="pageWidth * 0.14">
         </el-table-column>
       </el-table>
       </div>
@@ -304,7 +305,8 @@ export default {
       updateImageUrl: '',
       loadingUpdate: false,
       dynastyList: [],
-      addBookLoading: false
+      addBookLoading: false,
+      pageWidth: window.screen.width * 0.87, // 页面宽度
     }
   },
   mounted() {
@@ -616,7 +618,6 @@ export default {
   },
   created() {
     this.pageDynastyGet();
-
   }
 
 }
